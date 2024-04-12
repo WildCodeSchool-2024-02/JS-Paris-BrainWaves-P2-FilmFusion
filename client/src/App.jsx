@@ -11,13 +11,14 @@ function App() {
       .get(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`)
       .then((response) => {
         setMovies(response.data);
-        // console.log(response.data)
+        // q
+        
       });
   };
 
   return (
     <div>
-      {movies ? <div>{movies.name}</div> : null}
+      {movies ? <div>{movies.results.title}</div> : null}
       <button type="button" onClick={getMovies}>
         Get Movie
       </button>
