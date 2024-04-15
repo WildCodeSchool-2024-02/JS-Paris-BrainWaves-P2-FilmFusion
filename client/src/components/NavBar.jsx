@@ -1,9 +1,11 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import "./NavBar.css";
+import { useNavigate } from "react-router-dom";
 
 function NavBar() {
   const [openCategorie, setOpenCategorie] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="nav-bar">
@@ -16,7 +18,11 @@ function NavBar() {
       </div>
       <div className="menu-container">
         <div className="menu-accueil">
-          <button type="button" className="button-navbar">
+          <button
+            type="button"
+            className="button-navbar"
+            onClick={() => navigate("/")}
+          >
             Accueil
           </button>
         </div>
@@ -35,7 +41,10 @@ function NavBar() {
             style={{ overflowY: "auto", maxHeight: "200px" }}
           >
             <ul>
-              <DropdownItems text="Action" />
+              <DropdownItems
+                text="Action"
+                onClick={() => navigate("/categorie")}
+              />
               <DropdownItems text="Animation" />
               <DropdownItems text="Aventure" />
               <DropdownItems text="Comédie" />
@@ -63,7 +72,11 @@ function NavBar() {
           </button>
         </div>
         <div className="menu-forum">
-          <button type="button" className="button-navbar">
+          <button
+            type="button"
+            className="button-navbar"
+            onClick={() => navigate("/forumAccueil")}
+          >
             Forum
           </button>
         </div>
@@ -81,9 +94,15 @@ function NavBar() {
 }
 
 function DropdownItems({ text }) {
+  const navigate = useNavigate();
   return (
-    <li className="link">
-      <a href="/">{text}</a>
+    <li
+      className="link"
+      onClick={() => navigate("/categorie")}
+      onKeyDown={() => navigate("/categorie")}
+      role="presentation"
+    >
+      {text}
     </li>
   );
 }
