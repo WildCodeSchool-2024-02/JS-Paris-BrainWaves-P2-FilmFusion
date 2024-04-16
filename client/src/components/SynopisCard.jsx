@@ -34,6 +34,30 @@ function SynopisCard() {
           quaerat minus eveniet omnis perspiciatis vel sapiente quae molestias
           tenetur voluptate, officia deserunt voluptates placeat sunt minima
           voluptatibus quibusdam! Expedita, deserunt?
+          <br />
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+          asperiores, recusandae reiciendis, eveniet nam iusto, laborum
+          laudantium fugit earum assumenda ad aliquam et. Incidunt, quisquam
+          tempore! Expedita voluptatibus reiciendis quis. Dignissimos saepe
+          quidem quia rerum odit? Reprehenderit reiciendis, facere dicta beatae
+          consequuntur aliquid suscipit temporibus nisi amet culpa, soluta natus
+          nam, rem sed cumque! Velit aliquam quam modi repellendus sunt. Ullam
+          qui doloremque recusandae nesciunt atque officiis accusantium vitae
+          quaerat minus eveniet omnis perspiciatis vel sapiente quae molestias
+          tenetur voluptate, officia deserunt voluptates placeat sunt minima
+          voluptatibus quibusdam! Expedita, deserunt?
+          <br />
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+          asperiores, recusandae reiciendis, eveniet nam iusto, laborum
+          laudantium fugit earum assumenda ad aliquam et. Incidunt, quisquam
+          tempore! Expedita voluptatibus reiciendis quis. Dignissimos saepe
+          quidem quia rerum odit? Reprehenderit reiciendis, facere dicta beatae
+          consequuntur aliquid suscipit temporibus nisi amet culpa, soluta natus
+          nam, rem sed cumque! Velit aliquam quam modi repellendus sunt. Ullam
+          qui doloremque recusandae nesciunt atque officiis accusantium vitae
+          quaerat minus eveniet omnis perspiciatis vel sapiente quae molestias
+          tenetur voluptate, officia deserunt voluptates placeat sunt minima
+          voluptatibus quibusdam! Expedita, deserunt?
         </p>
       </div>
     </div>
