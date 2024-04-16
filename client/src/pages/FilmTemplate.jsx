@@ -22,7 +22,8 @@ function FilmTemplate() {
       <SynopisCard />
       <div>
         <p>Actors</p>
-        <section>{cast?.cast.name}</section>
+        <p>{cast?.cast.name}</p>
+        <img src={cast?.cast.profile_path} className="image-actor" alt="" />
       </div>
     </div>
   );
