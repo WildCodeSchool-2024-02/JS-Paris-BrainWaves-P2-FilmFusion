@@ -1,5 +1,16 @@
+import SynopisCard from "../components/SynopisCard";
+
+
 function FilmTemplate() {
-  return <div>Film Template</div>;
+
+ 
+
+  return (
+    <div>
+      <SynopisCard/>
+      <div>Film Template</div>
+    </div>
+  );
 }
 
 export default FilmTemplate;
