@@ -28,9 +28,7 @@ const router = createBrowserRouter([
         path: "/filmTemplate",
         element: <FilmTemplate />,
         loader: () =>
-          axios.get(
-            `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`
-          ),
+          axios.get(`https://api.themoviedb.org/3/movie/550?api_key=${apiKey}`),
       },
       {
         path: "/forumAccueil",

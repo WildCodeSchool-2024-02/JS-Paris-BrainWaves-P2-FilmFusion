@@ -11,7 +11,7 @@ function SynopisCard() {
           <p className="image-film">image du film</p>
         </div>
         <div className="info-film">
-          <h1>{movies.results[0].title}</h1>
+          <h1>{movies.data.title}</h1>
           <div className="data-film">
             <p>Date de sortie</p>
             <p>Durée du film</p>
