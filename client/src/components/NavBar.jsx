@@ -70,7 +70,7 @@ function NavBar() {
           <button
             type="button"
             className="button-navbar"
-            onClick={() => navigate("/filmTemplate")}
+            onClick={() => navigate("/film")}
           >
             Favoris
           </button>
