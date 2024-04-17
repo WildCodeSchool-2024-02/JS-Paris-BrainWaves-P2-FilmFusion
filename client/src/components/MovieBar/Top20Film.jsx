@@ -6,9 +6,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import "./movieBar.css";
+import { useNavigate } from "react-router-dom";
 
 function Top20Film() {
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
   const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
   const getMovies = () => {
     axios
@@ -24,7 +26,7 @@ function Top20Film() {
   }, []);
 
   const handleMovieClick = (movieId) => {
-    console.info("Clicked ID:", movieId);
+    navigate(`/film/${movieId}`);
   };
 
   return (
