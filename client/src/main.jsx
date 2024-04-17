@@ -25,10 +25,12 @@ const router = createBrowserRouter([
         element: <Categorie />,
       },
       {
-        path: "/filmTemplate",
+        path: "/film/:id",
         element: <FilmTemplate />,
-        loader: () =>
-          axios.get(`https://api.themoviedb.org/3/movie/550?api_key=${apiKey}`),
+        loader: ({ params }) =>
+          axios.get(
+            `https://api.themoviedb.org/3/movie/${params.id}?api_key=${apiKey}`
+          ),
       },
       {
         path: "/forumAccueil",
