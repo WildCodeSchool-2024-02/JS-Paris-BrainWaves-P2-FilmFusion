@@ -1,0 +1,32 @@
+.postermovie {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+}
+
+.titlleMoviebar {
+  color: #ffe27c;
+  background-color: #23180d;
+  width: max-content;
+  margin-left: 55px;
+  font-size: large;
+}
+.swiper {
+  width: 100vw;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
