@@ -1,0 +1,19 @@
+.box-h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.titre-container {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  width: 40%;
+  height: 65px;
+  border-radius: 10px;
+  background-color: #23180d;
+  margin: 20px;
+}
+
+.categorie-titre h1 {
+  font-size: 40px;
+}
