@@ -25,8 +25,11 @@ function SynopisCard() {
         </div>
       </div>
       <div className="synopis">
+        film-template
         <h2>Synopis</h2>
         <p>{movies.data.overview}</p>
+
+        <h2>Résumé</h2>
       </div>
     </div>
   );
