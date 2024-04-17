@@ -67,7 +67,11 @@ function NavBar() {
           </div>
         </div>
         <div className="menu-favoris">
-          <button type="button" className="button-navbar">
+          <button
+            type="button"
+            className="button-navbar"
+            onClick={() => navigate("/filmTemplate")}
+          >
             Favoris
           </button>
         </div>
