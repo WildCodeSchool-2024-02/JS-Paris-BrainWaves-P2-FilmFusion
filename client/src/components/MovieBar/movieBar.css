@@ -1,0 +1,15 @@
+.postermovie {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-left: 10px;
+}
+.imagemovie {
+  width: 180px;
+  height: 230px;
+}
+.titlleMoviebar {
+  color: #ffe27c;
+  padding-left: 10px;
+}
