@@ -1,11 +1,26 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import "./NavBar.css";
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
   const [openCategorie, setOpenCategorie] = useState(false);
   const navigate = useNavigate();
+
+  const handleClick = () => {
+    setOpenCategorie(false);
+  };
+
+  const [categories, setCategories] = useState();
+  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
+
+  useEffect(() => {
+    axios
+      .get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`)
+      .then((response) => {
+        setCategories(response.data);
+      });
+  }, []);
 
   return (
     <div className="nav-bar">
@@ -21,7 +36,10 @@ function NavBar() {
           <button
             type="button"
             className="button-navbar"
-            onClick={() => navigate("/")}
+            onClick={() => {
+              navigate("/");
+              handleClick();
+            }}
           >
             Accueil
           </button>
@@ -41,28 +59,22 @@ function NavBar() {
             style={{ overflowY: "auto", maxHeight: "200px" }}
           >
             <ul>
-              <DropdownItems
-                text="Action"
-                onClick={() => navigate("/categorie")}
-              />
-              <DropdownItems text="Animation" />
-              <DropdownItems text="Aventure" />
-              <DropdownItems text="Comédie" />
-              <DropdownItems text="Crime" />
-              <DropdownItems text="Documentaire" />
-              <DropdownItems text="Drame" />
-              <DropdownItems text="Familial" />
-              <DropdownItems text="Fantastique" />
-              <DropdownItems text="Guerre" />
-              <DropdownItems text="Historique" />
-              <DropdownItems text="Horreur" />
-              <DropdownItems text="Musique" />
-              <DropdownItems text="Mystère" />
-              <DropdownItems text="Romance" />
-              <DropdownItems text="Science-Fiction" />
-              <DropdownItems text="Thriller" />
-              <DropdownItems text="Téléfilm" />
-              <DropdownItems text="Western" />
+              {categories?.genres.map((categorie) => (
+                <li
+                  key={categorie.id}
+                  type="button"
+                  className="link"
+                  value={categorie.id}
+                  onClick={() => {
+                    navigate(`/categorie/${categorie.id}`);
+                    handleClick();
+                  }}
+                  onKeyDown={() => navigate(`/categorie/${categorie.id}`)}
+                  role="presentation"
+                >
+                  {categorie.name}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -79,7 +91,10 @@ function NavBar() {
           <button
             type="button"
             className="button-navbar"
-            onClick={() => navigate("/forumAccueil")}
+            onClick={() => {
+              navigate("/forumAccueil");
+              handleClick();
+            }}
           >
             Forum
           </button>
@@ -97,22 +112,4 @@ function NavBar() {
   );
 }
 
-function DropdownItems({ text }) {
-  const navigate = useNavigate();
-  return (
-    <li
-      className="link"
-      onClick={() => navigate("/categorie")}
-      onKeyDown={() => navigate("/categorie")}
-      role="presentation"
-    >
-      {text}
-    </li>
-  );
-}
-
 export default NavBar;
-
-DropdownItems.propTypes = {
-  text: PropTypes.string.isRequired,
-};

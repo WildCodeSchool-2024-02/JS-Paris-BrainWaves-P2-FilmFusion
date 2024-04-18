@@ -1,4 +1,4 @@
-.box-h1 {
+.en-tete {
   display: flex;
   justify-content: center;
 }
@@ -14,6 +14,23 @@
   margin: 20px;
 }
 
-.categorie-titre h1 {
+h1 {
   font-size: 40px;
+}
+
+.display-page {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.display-movie {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.image-movie {
+  width: 15%;
+  border-radius: 10px;
+  margin: 5px;
 }
