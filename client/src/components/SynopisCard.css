@@ -17,6 +17,7 @@
   background-color: black;
   height: 400px;
   width: 270px;
+  border-radius: 10px;
 }
 
 .info-film {

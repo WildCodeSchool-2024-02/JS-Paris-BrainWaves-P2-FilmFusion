@@ -1,0 +1,32 @@
+.genres-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: auto;
+  border-radius: 33px;
+  background-color: #23180d;
+  margin: 20px;
+}
+
+.display-bouton-genre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bouton-genre {
+  width: 40%;
+  height: 33px;
+  margin: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: #372d23;
+  color: #ffe27c;
+  box-shadow: 0px 4px 4px 0px black;
+}
+
+.bouton-genre:hover {
+  color: #2c1e11;
+}
