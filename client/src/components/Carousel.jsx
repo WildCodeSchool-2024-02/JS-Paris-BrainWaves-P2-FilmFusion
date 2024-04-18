@@ -1,5 +1,4 @@
-
-import axios from "axios"; 
+import axios from "axios";
 import { useState, useEffect } from "react";
 import "./Carousel.css";
 
@@ -10,7 +9,7 @@ function Carousel() {
 
   useEffect(() => {
     axios
-      .get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`) 
+      .get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
       .then((response) => {
         setUpcoming(response.data.results.slice(0, 8));
       });
@@ -18,9 +17,11 @@ function Carousel() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSlide((prevSlide) => (prevSlide + 1) % (upcoming ? upcoming.length : 1));
+      setSlide(
+        (prevSlide) => (prevSlide + 1) % (upcoming ? upcoming.length : 1)
+      );
     }, 3000);
-    
+
     return () => clearInterval(interval);
   }, [upcoming]);
 
@@ -32,14 +33,14 @@ function Carousel() {
     <div className="carousel">
       {upcoming.map((movie, idx) => (
         <img
-        src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-        alt={movie.title}
-        key={movie.id} 
-        className={slide === idx ? "slide active" : "slide"}
-      />
+          src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+          alt={movie.title}
+          key={movie.id}
+          className={slide === idx ? "slide active" : "slide"}
+        />
       ))}
     </div>
   );
-};
+}
 
 export default Carousel;
