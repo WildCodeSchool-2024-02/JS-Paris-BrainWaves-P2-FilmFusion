@@ -24,14 +24,11 @@ h2 {
 
 @media (min-width: 375px) and (max-width: 700px) {
   .actor-section {
-    /* margin-left: 20px; */
     margin-top: 60px;
   }
 
   .galerie-image {
     overflow: hidden;
-    /* width: 90%; */
-    /* margin-left: 20px; */
   }
   .slider {
     width: 100%;

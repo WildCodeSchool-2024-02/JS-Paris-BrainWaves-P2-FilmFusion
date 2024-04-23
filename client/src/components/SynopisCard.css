@@ -26,7 +26,7 @@
   width: 60%;
 }
 
-h1 {
+.title-movie {
   display: flex;
   justify-content: center;
 }

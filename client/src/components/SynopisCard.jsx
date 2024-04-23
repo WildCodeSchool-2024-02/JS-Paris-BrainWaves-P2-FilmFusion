@@ -13,7 +13,7 @@ function SynopisCard({ movie }) {
           />
         </div>
         <div className="info-film">
-          <h1>{movie.data.title}</h1>
+          <h1 className="title-movie">{movie.data.title}</h1>
           <div className="details-film">
             <div className="data-film">
               <div className="release-runtime">
