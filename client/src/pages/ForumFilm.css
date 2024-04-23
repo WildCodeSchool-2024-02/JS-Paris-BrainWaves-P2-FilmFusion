@@ -5,13 +5,13 @@
   --third-color: #23180d;
 }
 
-.Titre_film {
+.titleFilm {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
-.Titre {
+.title {
   background-color: var(--secondary-main-color);
   display: flex;
   justify-content: center;
@@ -20,13 +20,13 @@
   box-shadow: 0px 4px 4px 0px black;
 }
 
-.Baniere {
+.banner {
   display: flex;
   justify-content: center;
   margin-top: 25px;
 }
 
-.baniereFilmForum {
+.bannerMovieForum {
   height: 30vw;
   width: 95%;
   border-radius: 10px;
@@ -40,7 +40,7 @@
   margin-top: 50px;
 }
 
-.info_Film {
+.infoFilm {
   background-color: var(--secondary-main-color);
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@
   box-shadow: 0px 4px 4px 0px black;
 }
 
-.commentaire {
+.comment {
   display: flex;
   justify-content: flex-start;
   margin: auto;
@@ -60,23 +60,23 @@
   border-radius: 10px;
   margin-top: 50px;
 }
-.Profil {
+.profil {
   display: flex;
   align-items: flex-start;
   height: auto;
 }
-.photoProfil {
+.profilPic {
   max-width: 100px;
   max-height: 100px;
   border-radius: 10px;
   margin: 20px;
   object-fit: cover;
 }
-.Contenue {
+.content {
   height: auto;
   width: auto;
 }
-.Name {
+.name {
   margin: 20px;
   background-color: var(--third-color);
   width: 10%;
@@ -91,13 +91,13 @@
   width: auto;
   margin: 20px;
 }
-.Date_reponse {
+.dateReponse {
   display: flex;
   justify-content: space-between;
   height: 75px;
   margin-right: 20px;
 }
-.Date {
+.date {
   margin: 20px;
   background-color: var(--third-color);
   width: 15%;
@@ -115,7 +115,7 @@
   justify-content: center;
   border-radius: 10px;
 }
-.publierComment {
+.addComment {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -152,8 +152,3 @@
   display: flex;
   align-items: flex-end;
 }
-
-/* @media (min-width: 375px) and (max-width: 700px) {
-  .Baniere {
-  }
-} */

@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-// import PropTypes from "prop-types";
 import "./ForumFilm.css";
 import { useNavigate } from "react-router-dom";
 
@@ -28,13 +27,13 @@ function ForumFilm() {
 
   return (
     <div className="Header">
-      <div className="Titre_film">
-        <h1 className="Titre">{Detail.title}</h1>
+      <div className="titleFilm">
+        <h1 className="title">{Detail.title}</h1>
       </div>
 
-      <div className="Baniere">
+      <div className="banner">
         <img
-          className="baniereFilmForum"
+          className="bannerMovieForum"
           src={`https://image.tmdb.org/t/p/original${Detail.backdrop_path}`}
           alt={Detail.title}
         />
@@ -45,23 +44,23 @@ function ForumFilm() {
           onClick={() => handleMovieClick()}
           onKeyDown={handleMovieClick}
           role="presentation"
-          className="info_Film"
+          className="infoFilm"
         >
           Information du film
         </h2>
       </div>
 
-      <div className="commentaire">
-        <div className="Profil">
+      <div className="comment">
+        <div className="profil">
           <img
-            className="photoProfil"
+            className="profilPic"
             src="https://www.carnivalstore.de/wp-content/uploads/2021/09/1_f21db071-78e0-4143-ab8f-b0adfcebba8f.jpg"
             alt="img"
           />
         </div>
 
-        <div className="Contenue">
-          <div className="Name">Profil Name</div>
+        <div className="content">
+          <div className="name">Profil Name</div>
 
           <div className="text">
             {" "}
@@ -79,14 +78,14 @@ function ForumFilm() {
             possimus mollitia laboriosam sint a atque voluptatem rem.
           </div>
 
-          <div className="Date_reponse">
-            <p className="Date">Posté le 10/10/2024</p>
+          <div className="dateReponse">
+            <p className="date">Posté le 10/10/2024</p>
             <p className="reponse">Répondre</p>
           </div>
         </div>
       </div>
 
-      <div className="publierComment">
+      <div className="addComment">
         <div className="content">
           <div className="papoter">Papoter ici...</div>
         </div>
