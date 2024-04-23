@@ -13,22 +13,26 @@ function SynopisCard({ movie }) {
           />
         </div>
         <div className="info-film">
-          <h1>{movie.data.title}</h1>
-          <div className="data-film">
-            <p>{movie.data.release_date}</p>
-            <p>{movie.data.runtime} min</p>
-            <ul className="genres-movie">
-              {movie.data.genres.map((genre) => (
-                <li key={genre.id}>{genre.name}</li>
-              ))}
-            </ul>
+          <h1 className="title-movie">{movie.data.title}</h1>
+          <div className="details-film">
+            <div className="data-film">
+              <div className="release-runtime">
+                <p>{movie.data.release_date}</p>
+                <p>{movie.data.runtime} min</p>
+              </div>
+              <div className="genres-movie">
+                {movie.data.genres.map((genre) => (
+                  <p key={genre.id}>{genre.name}</p>
+                ))}
+              </div>
+            </div>
+            <p className="realisateur">Réalisateur</p>
           </div>
-          <p>Réalisateur</p>
         </div>
       </div>
       <div className="synopis">
         <h2>Synopsis</h2>
-        <p>{movie.data.overview}</p>
+        <p className="synopsis-resume">{movie.data.overview}</p>
       </div>
     </div>
   );
