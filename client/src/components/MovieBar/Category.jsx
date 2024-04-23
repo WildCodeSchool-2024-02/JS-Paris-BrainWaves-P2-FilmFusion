@@ -52,7 +52,7 @@ function Category() {
   };
 
   return (
-    <div>
+    <div className="list-swiper">
       {genres.map((genre) => (
         <div key={genre.id}>
           <h2 className="titleMovieBar">{genre.name}</h2>
@@ -62,8 +62,9 @@ function Category() {
             className="mySwiper"
             breakpoints={{
               1200: { slidesPerView: 8, spaceBetween: 20 },
-              770: { slidesPerView: 7, spaceBetween: 20 },
+              770: { slidesPerView: 6, spaceBetween: 20 },
               500: { slidesPerView: 6, spaceBetween: 20 },
+              425: { slidesPerView: 4, spaceBetween: 20 },
               320: { slidesPerView: 3, spaceBetween: 20 },
               280: { slidesPerView: 2, spaceBetween: 20 },
             }}

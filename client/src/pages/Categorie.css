@@ -37,6 +37,16 @@ h1 {
   box-shadow: 0px 4px 4px 0px black;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.bouttonPagi {
+  color: #ffe27c;
+  background-color: #23180d;
+  border-radius: 25px;
+}
+
 @media (min-width: 375px) and (max-width: 700px) {
   .display-page {
     display: flex;
