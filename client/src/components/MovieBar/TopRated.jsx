@@ -37,8 +37,6 @@ function TopRated() {
         navigation
         modules={[Navigation]}
         className="mySwiper"
-        // slidesPerView={8}
-        // spaceBetween={20}
         breakpoints={{
           1200: { slidesPerView: 8, spaceBetween: 20 },
           770: { slidesPerView: 7, spaceBetween: 20 },
