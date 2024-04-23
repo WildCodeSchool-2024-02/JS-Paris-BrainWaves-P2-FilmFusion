@@ -1,0 +1,18 @@
+.titleforum {
+  display: flex;
+  text-align: center;
+  font-size: large;
+  background-color: #23180d;
+  border-radius: 10px;
+}
+
+.forum {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.forumalignement {
+  display: flex;
+}
