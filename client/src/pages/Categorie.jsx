@@ -90,7 +90,7 @@ function Categorie() {
       </div>
       <div className="pagination">
         <button
-          className="bouttonPagi"
+          className="buttonPagi"
           type="submit"
           onClick={handlePrevPage}
           disabled={page === 1}
