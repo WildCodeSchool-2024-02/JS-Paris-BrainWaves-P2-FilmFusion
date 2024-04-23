@@ -3,6 +3,8 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import "./Global.css";
 
+
+
 function App() {
   return (
     <div>
