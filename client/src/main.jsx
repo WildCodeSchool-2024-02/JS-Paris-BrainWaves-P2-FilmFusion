@@ -20,10 +20,12 @@ const router = createBrowserRouter([
         path: "/",
         element: <Accueil />,
       },
+
       {
         path: "/categorie",
         element: <Categorie />,
       },
+
       {
         path: "/categorie/:categoryid",
         element: <Categorie />,
@@ -36,10 +38,12 @@ const router = createBrowserRouter([
             `https://api.themoviedb.org/3/movie/${params.id}?api_key=${apiKey}`
           ),
       },
+
       {
         path: "/forumAccueil",
         element: <ForumAccueil />,
       },
+      
       {
         path: "/forumFilm",
         element: <ForumFilm />,
