@@ -1,0 +1,18 @@
+.titlleforum {
+  display: flex;
+  text-align: center;
+  font-size: large;
+  background-color: #23180d;
+  border-radius: 10px;
+}
+
+.fofo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ok {
+  display: flex;
+}

@@ -1,0 +1,23 @@
+.listecolor {
+  background-color: #2c1e11;
+  max-width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+
+.listemovies {
+  text-align: center;
+  background-color: #23180d;
+  font-size: 30px;
+  max-width: max-content;
+  border-radius: 10px;
+}
+.listfilms {
+  text-align: center;
+  background-color: #23180d;
+  font-size: 14px;
+  border-radius: 10px;
+}
