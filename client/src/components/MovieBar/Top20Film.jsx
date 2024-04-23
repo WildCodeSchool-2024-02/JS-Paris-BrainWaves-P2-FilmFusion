@@ -32,8 +32,8 @@ function Top20Film() {
   };
 
   return (
-    <div>
-      <h1 className="titlleMoviebar">Top 20</h1>
+    <div className="list-swiper">
+      <h1 className="titleMoviebar">Top 20</h1>
 
       <Swiper
         navigation

@@ -30,8 +30,8 @@ function TopRated() {
   };
 
   return (
-    <div>
-      <h1 className="titlleMoviebar">Top Rated</h1>
+    <div className="list-swiper">
+      <h1 className="titleMoviebar">Top Rated</h1>
 
       <Swiper
         navigation
