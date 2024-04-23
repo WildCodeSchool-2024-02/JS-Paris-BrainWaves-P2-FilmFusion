@@ -4,54 +4,134 @@
   flex-wrap: wrap;
   width: 100vw;
   justify-content: space-around;
-  margin: 30px;
   margin-top: 60px;
 }
 
 .image-container {
+  display: flex;
+  justify-content: center;
   width: 30%;
   margin: 0 auto;
 }
 
 .image-film {
-  background-color: black;
   height: 400px;
   width: 270px;
+  border-radius: 10px;
 }
 
 .info-film {
   display: flex;
   flex-direction: column;
   width: 60%;
-  /* align-items: center; */
 }
 
-.data-film {
+.title-movie {
   display: flex;
-  flex-wrap: wrap;
-  width: 200px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.data-film li {
-  width: 150px;
-  margin: 10px;
-  padding: 0;
+.details-film {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.release-runtime {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .genres-movie {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  width: auto;
+}
+
+.release-runtime p {
+  margin: 10px;
+  margin-right: 20px;
 }
 
 .synopis {
   width: auto;
-  margin: 40px;
   margin-top: 60px;
 }
 
-p {
-  margin: 10px;
+.synopsis-resume {
+  margin-left: 20px;
+}
+
+.realisateur {
+  margin-left: 10px;
+}
+
+@media (min-width: 375px) and (max-width: 700px) {
+  .film-presentation {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .image-film {
+    height: 350px;
+    width: 270px;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+  }
+
+  .info-film {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .details-film {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .data-film {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .genres-movie {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  p {
+    font-size: small;
+  }
+
+  .data-film li {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: medium;
+    margin-left: 30px;
+  }
+
+  .synopsis-resume {
+    font-size: 12px;
+    margin: 0 20px;
+  }
 }
