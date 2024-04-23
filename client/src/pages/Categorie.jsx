@@ -14,7 +14,13 @@ function Categorie() {
 
   const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
 
-  const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${categoryid.toString() ? categoryid : firstIdListGenre}&api_key=${apiKey}`;
+  const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${categoryid ? categoryid.toString() : firstIdListGenre}&api_key=${apiKey}`;
+
+  const category = genres?.find(
+    (genre) =>
+      genre.id.toString() ===
+      (categoryid ? categoryid.toString() : firstIdListGenre.toString())
+  );
 
   useEffect(() => {
     axios
@@ -43,8 +49,6 @@ function Categorie() {
   const handleMovieClick = (movieId) => {
     navigate(`/film/${movieId}`);
   };
-
-  const category = genres?.find((genre) => genre.id.toString() === categoryid);
 
   return (
     <div>
