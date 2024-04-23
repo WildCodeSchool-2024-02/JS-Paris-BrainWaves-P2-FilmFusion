@@ -27,6 +27,10 @@ const router = createBrowserRouter([
       },
 
       {
+        path: "/categorie/:categoryid",
+        element: <Categorie />,
+      },
+      {
         path: "/film/:id",
         element: <FilmTemplate />,
         loader: ({ params }) =>

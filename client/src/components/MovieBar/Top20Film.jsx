@@ -12,11 +12,14 @@ function Top20Film() {
   const [movies, setMovies] = useState([]);
   const navigate = useNavigate();
   const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
+
   const getMovies = () => {
     axios
-      .get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
+      .get(
+        `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
       .then((response) => {
         setMovies(response.data.results);
+
         console.info(response.data.results);
       });
   };
@@ -30,8 +33,8 @@ function Top20Film() {
   };
 
   return (
-    <div>
-      <h1 className="titlleMoviebar">Top 20</h1>
+    <div className="list-swiper">
+      <h1 className="titleMoviebar">Top 20</h1>
 
       <Swiper
         navigation
