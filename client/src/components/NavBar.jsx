@@ -1,36 +1,35 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+// import axios from "axios";
+import { useState } from "react";
 import "./NavBar.css";
 import { useNavigate } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 function NavBar() {
   const [openCategorie, setOpenCategorie] = useState(false);
+  const [openSearchBar, setOpenSearchBar] = useState(false);
+  const [value, setValue] = useState("");
   const navigate = useNavigate();
 
   const handleClick = () => {
+    setOpenSearchBar(false);
     setOpenCategorie(false);
+    setValue("");
   };
 
-  const [categories, setCategories] = useState();
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
+  // const [categories, setCategories] = useState();
+  // const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
 
-  useEffect(() => {
-    axios
-      .get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`)
-      .then((response) => {
-        setCategories(response.data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`)
+  //     .then((response) => {
+  //       setCategories(response.data);
+  //     });
+  // }, []);
 
   return (
     <div className="nav-bar">
-      <div className="logo-section">
-        <img
-          className="logo"
-          src="./src/assets/images/logoDesktop.png"
-          alt=""
-        />
-      </div>
+      <div className="logo-section" />
       <div className="menu-container">
         <div className="menu-accueil">
           <button
@@ -49,7 +48,8 @@ function NavBar() {
             type="button"
             className="button-navbar"
             onClick={() => {
-              setOpenCategorie(!openCategorie);
+              navigate(`/categorie`);
+              handleClick();
             }}
           >
             Catégories
@@ -59,7 +59,7 @@ function NavBar() {
             style={{ overflowY: "auto", maxHeight: "200px" }}
           >
             <ul>
-              {categories?.genres.map((categorie) => (
+              {/* {categories?.genres.map((categorie) => (
                 <li
                   key={categorie.id}
                   type="button"
@@ -74,18 +74,9 @@ function NavBar() {
                 >
                   {categorie.name}
                 </li>
-              ))}
+              ))} */}
             </ul>
           </div>
-        </div>
-        <div className="menu-favoris">
-          <button
-            type="button"
-            className="button-navbar"
-            onClick={() => navigate("")}
-          >
-            Favoris
-          </button>
         </div>
         <div className="menu-forum">
           <button
@@ -100,12 +91,12 @@ function NavBar() {
           </button>
         </div>
       </div>
-      <div className="searchbar-logo">
-        <input className="search-bar" placeholder="Rechercher .." />
-        <img
-          className="logo-avatar"
-          src="./src/assets/images/user-avatar.png"
-          alt=""
+      <div className="searchbar">
+        <SearchBar
+          openSearchBar={openSearchBar}
+          setOpenSearchBar={setOpenSearchBar}
+          value={value}
+          setValue={setValue}
         />
       </div>
     </div>

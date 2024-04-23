@@ -4,3 +4,13 @@
   margin-top: 40px;
   margin-bottom: 50px;
 }
+
+@media (min-width: 375px) and (max-width: 700px) {
+  .carousel {
+    width: 330px;
+  }
+
+  .Carousel {
+    margin-bottom: 0;
+  }
+}

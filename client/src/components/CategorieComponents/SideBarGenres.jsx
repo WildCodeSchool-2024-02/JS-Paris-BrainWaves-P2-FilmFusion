@@ -1,26 +1,15 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import "./SideBarGenres.css";
 
-function SideBarGenres() {
-  const [categories, setCategories] = useState();
+function SideBarGenres({ categories }) {
   const navigate = useNavigate();
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
-
-  useEffect(() => {
-    axios
-      .get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`)
-      .then((response) => {
-        setCategories(response.data);
-      });
-  }, []);
 
   return (
     <div className="genres-container">
-      <p>Genres</p>
+      <p className="p-genre">Genres</p>
       <div className="display-bouton-genre">
-        {categories?.genres.map((categorie) => (
+        {categories.map((categorie) => (
           <button
             key={categorie.id}
             type="button"
@@ -37,3 +26,12 @@ function SideBarGenres() {
 }
 
 export default SideBarGenres;
+
+SideBarGenres.propTypes = {
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

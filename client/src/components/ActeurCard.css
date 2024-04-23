@@ -1,6 +1,9 @@
 .actor-section {
-  margin-left: 40px;
   margin-top: 60px;
+}
+
+h2 {
+  margin-left: 30px;
 }
 
 .galerie-image {
@@ -13,8 +16,29 @@
 }
 
 .image-actor {
-  min-width: 100px;
-  height: 110px;
+  min-width: 83px;
+  height: 111px;
   border-radius: 50%;
   margin: 5px;
+}
+
+@media (min-width: 375px) and (max-width: 700px) {
+  .actor-section {
+    /* margin-left: 20px; */
+    margin-top: 60px;
+  }
+
+  .galerie-image {
+    overflow: hidden;
+    /* width: 90%; */
+    /* margin-left: 20px; */
+  }
+  .slider {
+    width: 100%;
+  }
+
+  .image-actor {
+    min-width: 63px;
+    height: 75px;
+  }
 }
