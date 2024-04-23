@@ -30,15 +30,20 @@ function TopRated() {
   };
 
   return (
-    <div>
-      <h1 className="titlleMoviebar">Top Rated</h1>
+    <div className="list-swiper">
+      <h1 className="titleMoviebar">Top Rated</h1>
 
       <Swiper
         navigation
         modules={[Navigation]}
         className="mySwiper"
-        slidesPerView={8}
-        spaceBetween={20}
+        breakpoints={{
+          1200: { slidesPerView: 8, spaceBetween: 20 },
+          770: { slidesPerView: 7, spaceBetween: 20 },
+          500: { slidesPerView: 6, spaceBetween: 20 },
+          320: { slidesPerView: 3, spaceBetween: 20 },
+          280: { slidesPerView: 2, spaceBetween: 20 },
+        }}
       >
         {movies.map((movie) => (
           <SwiperSlide key={movie.id}>
