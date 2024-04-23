@@ -1,4 +1,4 @@
-.titlleforum {
+.titleforum {
   display: flex;
   text-align: center;
   font-size: large;
@@ -6,13 +6,13 @@
   border-radius: 10px;
 }
 
-.fofo {
+.forum {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.ok {
+.forumalignement {
   display: flex;
 }

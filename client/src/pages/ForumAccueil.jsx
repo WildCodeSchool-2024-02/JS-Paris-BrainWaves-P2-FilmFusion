@@ -4,12 +4,12 @@ import "./ForumAcceuil.css";
 
 function ForumAccueil() {
   return (
-    <div className="fofo">
-      <h1 className="titlleforum">
+    <div className="forum">
+      <h1 className="titleforum">
         Bienvenues sur le forum <br /> Venez papoter et trouver des conseils
         pour choisir <br /> un film !
       </h1>
-      <div className="ok">
+      <div className="forumalignement">
         <ListeFilm />
         <Forumpost />
       </div>

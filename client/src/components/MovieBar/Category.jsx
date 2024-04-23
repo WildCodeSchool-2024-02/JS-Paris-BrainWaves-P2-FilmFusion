@@ -55,7 +55,7 @@ function Category() {
     <div>
       {genres.map((genre) => (
         <div key={genre.id}>
-          <h2 className="titlleMoviebar">{genre.name}</h2>
+          <h2 className="titleMovieBar">{genre.name}</h2>
           <Swiper
             navigation
             modules={[Navigation]}

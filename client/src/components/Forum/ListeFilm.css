@@ -1,4 +1,4 @@
-.listecolor {
+.listcolor {
   background-color: #2c1e11;
   max-width: max-content;
   display: flex;
@@ -8,7 +8,7 @@
   margin-left: 15px;
 }
 
-.listemovies {
+.listmovies {
   text-align: center;
   background-color: #23180d;
   font-size: 30px;

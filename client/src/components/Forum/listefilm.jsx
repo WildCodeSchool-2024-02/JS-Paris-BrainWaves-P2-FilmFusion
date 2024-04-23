@@ -20,8 +20,8 @@ function ListeFilm() {
   }, []);
 
   return (
-    <div className="listecolor">
-      <h1 className="listemovies">Liste des fillms</h1>
+    <div className="listcolor">
+      <h1 className="listmovies">Liste des fillms</h1>
       {movies.map((movie) => (
         <div key={movie.title}>
           <p className="listfilms">{movie.title}</p>{" "}
