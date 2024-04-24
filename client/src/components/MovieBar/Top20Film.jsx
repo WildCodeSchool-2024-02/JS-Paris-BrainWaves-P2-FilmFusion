@@ -39,7 +39,6 @@ function Top20Film() {
         navigation
         modules={[Navigation]}
         className="mySwiper"
-      
         breakpoints={{
           1200: { slidesPerView: 8, spaceBetween: 20 },
           770: { slidesPerView: 6, spaceBetween: 20 },

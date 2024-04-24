@@ -55,7 +55,16 @@ function Category() {
     <div className="list-swiper">
       {genres.map((genre) => (
         <div key={genre.id}>
-          <h2 className="titleMovieBar">{genre.name}</h2>
+          <h2
+            key={genre.id}
+            onClick={() => navigate(`/categorie/${genre.id}`)}
+            onKeyDown={() => navigate(`/categorie/${genre.id}`)}
+            role="none"
+            className="titleMovieBar"
+            alt="liens-des-classes"
+          >
+            {genre.name}
+          </h2>
           <Swiper
             navigation
             modules={[Navigation]}
