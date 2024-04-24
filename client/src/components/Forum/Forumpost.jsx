@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Forumpost.css";
+import { useNavigate } from "react-router-dom";
 
 function Forumpost() {
   const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
@@ -21,6 +22,11 @@ function Forumpost() {
   useEffect(() => {
     getMovies();
   }, []);
+  const navigate = useNavigate();
+  const handleMovieClick = () => {
+    navigate(`/forumFilm`);
+  };
+
   return (
     <div className="post">
       {movies.map((movie) => (
@@ -42,7 +48,12 @@ function Forumpost() {
           <p className="infopost">
             <div className="postcomposent">
               <p className="postdate">poster le 00/00/00</p>
-              <button type="button" className="postbutton">
+              <button
+                type="button"
+                className="postbutton"
+                onClick={() => handleMovieClick()}
+                onKeyDown={() => handleMovieClick()}
+              >
                 {" "}
                 button
               </button>
