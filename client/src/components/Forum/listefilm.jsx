@@ -7,7 +7,7 @@ function ListeFilm() {
   const [movies, setMovies] = useState([]);
   const getMovies = () => {
     axios
-      .get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
+      .get(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`)
       .then((response) => {
         setMovies(response.data.results);
 

@@ -24,7 +24,7 @@ function Forumpost() {
   }, []);
   const navigate = useNavigate();
   const handleMovieClick = () => {
-    navigate(`/forumFilm/`);
+    navigate(`/forumFilm`);
   };
 
   return (

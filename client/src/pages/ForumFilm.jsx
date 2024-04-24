@@ -8,7 +8,7 @@ function ForumFilm() {
   const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
   const navigate = useNavigate();
   const handleMovieClick = () => {
-    navigate(`/forumFilm/`);
+    navigate(`/forumFilm`);
   };
 
   useEffect(() => {
