@@ -11,6 +11,14 @@ function SearchBar({ openSearchBar, setOpenSearchBar, value, setValue }) {
 
   const [urlSearch, setUrlSearch] = useState([]);
   const navigate = useNavigate();
+  const [visibleResponsive, setVisibleResponsive] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(
+      "(min-width: 375px) and (max-width: 700px)"
+    ).matches;
+    setVisibleResponsive(mediaQuery);
+  }, []);
 
   useEffect(() => {
     axios
@@ -34,21 +42,32 @@ function SearchBar({ openSearchBar, setOpenSearchBar, value, setValue }) {
     navigate(`/film/${movieId}`);
   };
 
+  const toggleInput = () => {
+    // setVisibleResponsive(!visibleResponsive);
+    navigate("/searchBarMobile");
+  };
+
   return (
     <div className="search-bar-container">
-      <input
-        type="text"
-        placeholder="Search ..."
-        value={value}
-        onChange={handleChange}
-      />
-      <button
-        type="button"
-        aria-label="Toggle Search Bar"
-        className="bouton-searchbar-mobile-version"
-      >
-        <IoIosSearch />
-      </button>
+      {!visibleResponsive && (
+        <input
+          className="visible"
+          type="text"
+          placeholder="Search ..."
+          value={value}
+          onChange={handleChange}
+        />
+      )}
+      {visibleResponsive && (
+        <button
+          type="button"
+          aria-label="Toggle Search Bar"
+          className="bouton-searchbar-mobile-version"
+          onClick={toggleInput}
+        >
+          <IoIosSearch />
+        </button>
+      )}
       <div
         className={`dropdown-search-bar ${openSearchBar ? "active" : "inactive"}`}
       >

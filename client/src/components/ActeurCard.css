@@ -2,8 +2,13 @@
   margin-top: 60px;
 }
 
-h2 {
+.actor-title {
+  background-color: #23180d;
   margin-left: 30px;
+  width: 15%;
+  padding: 3px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px 0px black;
 }
 
 .galerie-image {
