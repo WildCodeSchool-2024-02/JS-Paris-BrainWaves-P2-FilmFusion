@@ -24,6 +24,8 @@ function Categorie() {
   );
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     axios
       .get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`)
       .then((response) => {
