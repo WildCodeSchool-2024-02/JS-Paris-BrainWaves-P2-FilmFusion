@@ -22,7 +22,7 @@ function ActeurCard({ movie }) {
   return (
     <div>
       <div className="actor-section">
-        <h2>Actors</h2>
+        <h2 className="actor-title">Actors</h2>
         <div className="galerie-image">
           <div className="slider">
             {cast?.cast.map(

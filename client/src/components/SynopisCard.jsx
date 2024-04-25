@@ -2,6 +2,7 @@ import "./SynopisCard.css";
 import PropTypes from "prop-types";
 
 function SynopisCard({ movie }) {
+  
   return (
     <div>
       <div className="film-presentation">
@@ -31,7 +32,7 @@ function SynopisCard({ movie }) {
         </div>
       </div>
       <div className="synopis">
-        <h2>Synopsis</h2>
+        <h2 className="synopsis-title">Synopsis</h2>
         <p className="synopsis-resume">{movie.data.overview}</p>
       </div>
     </div>

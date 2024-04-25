@@ -1,11 +1,16 @@
 import PropTypes from "prop-types";
 import axios from "axios";
 import "./SearchBar.css";
-import { IoIosSearch } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SearchBar({ openSearchBar, setOpenSearchBar, value, setValue }) {
+function SearchBar({
+  openSearchBar,
+  setOpenSearchBar,
+  value,
+  setValue,
+  visibleResponsive,
+}) {
   const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
   const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
 
@@ -36,19 +41,15 @@ function SearchBar({ openSearchBar, setOpenSearchBar, value, setValue }) {
 
   return (
     <div className="search-bar-container">
-      <input
-        type="text"
-        placeholder="Search ..."
-        value={value}
-        onChange={handleChange}
-      />
-      <button
-        type="button"
-        aria-label="Toggle Search Bar"
-        className="bouton-searchbar-mobile-version"
-      >
-        <IoIosSearch />
-      </button>
+      {!visibleResponsive && (
+        <input
+          className="visible"
+          type="text"
+          placeholder="Search ..."
+          value={value}
+          onChange={handleChange}
+        />
+      )}
       <div
         className={`dropdown-search-bar ${openSearchBar ? "active" : "inactive"}`}
       >
@@ -75,4 +76,5 @@ SearchBar.propTypes = {
   setOpenSearchBar: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   setValue: PropTypes.func.isRequired,
+  visibleResponsive: PropTypes.bool.isRequired,
 };

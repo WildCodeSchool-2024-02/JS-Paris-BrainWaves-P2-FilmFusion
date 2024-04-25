@@ -6,10 +6,10 @@ import "./Global.css";
 
 function App() {
   return (
-    <div>
+    <>
       <NavBar />
       <Outlet />
-    </div>
+    </>
   );
 }
 

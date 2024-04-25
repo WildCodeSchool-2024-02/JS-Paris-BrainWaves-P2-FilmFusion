@@ -2,8 +2,13 @@
   margin-top: 60px;
 }
 
-h2 {
+.actor-title {
+  background-color: #23180d;
   margin-left: 30px;
+  width: 15%;
+  padding: 3px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px 0px black;
 }
 
 .galerie-image {
@@ -16,10 +21,12 @@ h2 {
 }
 
 .image-actor {
-  min-width: 83px;
-  height: 111px;
+  min-width: 110px;
+  height: 110px;
   border-radius: 50%;
   margin: 5px;
+  object-fit: cover;
+  object-position: 100% 35%;
 }
 
 @media (min-width: 375px) and (max-width: 700px) {
@@ -37,5 +44,7 @@ h2 {
   .image-actor {
     min-width: 63px;
     height: 75px;
+    object-fit: cover;
+    object-position: 100% 35%;
   }
 }

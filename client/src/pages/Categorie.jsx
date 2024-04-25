@@ -66,7 +66,7 @@ function Categorie() {
   }, [categoryid]);
 
   return (
-    <div>
+    <>
       <div className="en-tete">
         <h1 className="titre-container">{category?.name}</h1>
       </div>
@@ -102,7 +102,7 @@ function Categorie() {
           Suivant
         </button>
       </div>
-    </div>
+    </>
   );
 }
 

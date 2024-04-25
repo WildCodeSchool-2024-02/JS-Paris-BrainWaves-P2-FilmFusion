@@ -1,17 +1,32 @@
-// import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./NavBar.css";
+import { IoIosSearch } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import ModalSearchBarMobile from "./ModalSearchBarMobile";
 
 function NavBar() {
   const [openSearchBar, setOpenSearchBar] = useState(false);
   const [value, setValue] = useState("");
   const navigate = useNavigate();
+  const [visibleResponsive, setVisibleResponsive] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(
+      "(min-width: 375px) and (max-width: 700px)"
+    ).matches;
+    setVisibleResponsive(mediaQuery);
+  }, []);
 
   const handleClick = () => {
     setOpenSearchBar(false);
     setValue("");
+  };
+
+  const handleModal = () => {
+    setOpenModal(true);
+    document.body.classList.add("active");
   };
 
   return (
@@ -56,12 +71,26 @@ function NavBar() {
         </div>
       </div>
       <div className="searchbar">
-        <SearchBar
-          openSearchBar={openSearchBar}
-          setOpenSearchBar={setOpenSearchBar}
-          value={value}
-          setValue={setValue}
-        />
+        {!visibleResponsive && (
+          <SearchBar
+            openSearchBar={openSearchBar}
+            setOpenSearchBar={setOpenSearchBar}
+            value={value}
+            setValue={setValue}
+            visibleResponsive={visibleResponsive}
+          />
+        )}
+        {visibleResponsive && (
+          <button
+            type="button"
+            aria-label="Toggle Search Bar"
+            className="open-modal-search-bar"
+            onClick={handleModal}
+          >
+            <IoIosSearch />
+          </button>
+        )}
+        {openModal && <ModalSearchBarMobile closeModal={setOpenModal} />}
       </div>
     </div>
   );

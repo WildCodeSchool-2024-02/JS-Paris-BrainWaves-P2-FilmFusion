@@ -1,14 +1,10 @@
-input {
+.visible {
   border: none;
   box-shadow: 0px 3px 4px 0px black;
 }
 
-input:focus {
+.visible:focus {
   outline: none;
-}
-
-.bouton-searchbar-mobile-version {
-  display: none;
 }
 
 .dropdown-search-bar {
@@ -41,14 +37,7 @@ input:focus {
 }
 
 @media (min-width: 375px) and (max-width: 700px) {
-  input {
+  .visible {
     display: none;
-  }
-
-  .bouton-searchbar-mobile-version {
-    display: flex;
-    color: #ffe27c;
-    background-color: #2c1e11;
-    border: none;
   }
 }
