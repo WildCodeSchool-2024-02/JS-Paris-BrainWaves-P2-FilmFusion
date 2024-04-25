@@ -6,14 +6,14 @@ import "./Acceuil.css";
 
 function Accueil() {
   return (
-    <div>
+    <>
       <div className="Carousel">
         <Carousel />
       </div>
       <Top20Film />
       <TopRated />
-      <Category/>
-    </div>
+      <Category />
+    </>
   );
 }
 

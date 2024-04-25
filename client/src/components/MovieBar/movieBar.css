@@ -53,8 +53,13 @@
   width: 100%;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px black;
+  transition: transform 0.1s;
 }
-
+.swiper-slide img:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 @media (min-width: 375px) and (max-width: 700px) {
   .list-swiper {
     margin-left: 10px;
