@@ -5,7 +5,6 @@ import Recommendations from "../components/MovieBar/Recommendations";
 
 function FilmTemplate() {
   const movie = useLoaderData();
-  console.info("id du film : ", movie.data.id);
 
   return (
     <div>
