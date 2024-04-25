@@ -1,4 +1,3 @@
-// import axios from "axios";
 import { useState, useEffect } from "react";
 import "./NavBar.css";
 import { IoIosSearch } from "react-icons/io";
