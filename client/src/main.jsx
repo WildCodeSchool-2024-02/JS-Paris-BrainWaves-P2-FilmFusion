@@ -8,7 +8,6 @@ import Categorie from "./pages/Categorie";
 import FilmTemplate from "./pages/FilmTemplate";
 import ForumAccueil from "./pages/ForumAccueil";
 import ForumFilm from "./pages/ForumFilm";
-import SearchBarMobile from "./pages/SearchBarMobile/SearchBarMobile";
 
 const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
 
@@ -44,10 +43,6 @@ const router = createBrowserRouter([
       {
         path: "/forumFilm",
         element: <ForumFilm />,
-      },
-      {
-        path: "/searchBarMobile",
-        element: <SearchBarMobile />,
       },
     ],
   },

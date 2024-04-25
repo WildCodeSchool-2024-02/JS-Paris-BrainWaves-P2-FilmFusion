@@ -1,24 +1,21 @@
 import PropTypes from "prop-types";
 import axios from "axios";
 import "./SearchBar.css";
-import { IoIosSearch } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SearchBar({ openSearchBar, setOpenSearchBar, value, setValue }) {
+function SearchBar({
+  openSearchBar,
+  setOpenSearchBar,
+  value,
+  setValue,
+  visibleResponsive,
+}) {
   const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
   const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
 
   const [urlSearch, setUrlSearch] = useState([]);
   const navigate = useNavigate();
-  const [visibleResponsive, setVisibleResponsive] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(
-      "(min-width: 375px) and (max-width: 700px)"
-    ).matches;
-    setVisibleResponsive(mediaQuery);
-  }, []);
 
   useEffect(() => {
     axios
@@ -42,11 +39,6 @@ function SearchBar({ openSearchBar, setOpenSearchBar, value, setValue }) {
     navigate(`/film/${movieId}`);
   };
 
-  const toggleInput = () => {
-    // setVisibleResponsive(!visibleResponsive);
-    navigate("/searchBarMobile");
-  };
-
   return (
     <div className="search-bar-container">
       {!visibleResponsive && (
@@ -57,16 +49,6 @@ function SearchBar({ openSearchBar, setOpenSearchBar, value, setValue }) {
           value={value}
           onChange={handleChange}
         />
-      )}
-      {visibleResponsive && (
-        <button
-          type="button"
-          aria-label="Toggle Search Bar"
-          className="bouton-searchbar-mobile-version"
-          onClick={toggleInput}
-        >
-          <IoIosSearch />
-        </button>
       )}
       <div
         className={`dropdown-search-bar ${openSearchBar ? "active" : "inactive"}`}
@@ -94,4 +76,5 @@ SearchBar.propTypes = {
   setOpenSearchBar: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   setValue: PropTypes.func.isRequired,
+  visibleResponsive: PropTypes.bool.isRequired,
 };
