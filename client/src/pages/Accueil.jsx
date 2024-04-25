@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel";
 import Category from "../components/MovieBar/Category";
 import "./Acceuil.css";
 
+
 function Accueil() {
   return (
     <div>
@@ -12,7 +13,8 @@ function Accueil() {
       </div>
       <Top20Film />
       <TopRated />
-      <Category/>
+      <Category />
+      
     </div>
   );
 }
