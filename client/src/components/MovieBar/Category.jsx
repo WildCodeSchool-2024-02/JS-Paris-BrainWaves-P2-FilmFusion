@@ -10,15 +10,17 @@ import { Navigation } from "swiper/modules";
 import "./movieBar.css";
 import { useNavigate } from "react-router-dom";
 
+const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
+
 function Category() {
   const [genres, setGenres] = useState([]);
   const [moviesByGenre, setMoviesByGenre] = useState({});
   const navigate = useNavigate();
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
 
   const getGenres = () => {
     axios
-      .get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`)
+      .get(`${apiUrl}/genre/movie/list?api_key=${apiKey}`)
       .then((response) => {
         setGenres(response.data.genres.slice(0, 20));
       });
@@ -26,9 +28,7 @@ function Category() {
 
   const getMoviesByGenre = (genreId) => {
     axios
-      .get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${genreId}`
-      )
+      .get(`${apiUrl}/discover/movie?api_key=${apiKey}&with_genres=${genreId}`)
       .then((response) => {
         setMoviesByGenre((prevMoviesByGenre) => ({
           ...prevMoviesByGenre,

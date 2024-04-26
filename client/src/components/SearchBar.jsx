@@ -4,6 +4,9 @@ import "./SearchBar.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
+
 function SearchBar({
   openSearchBar,
   setOpenSearchBar,
@@ -11,8 +14,7 @@ function SearchBar({
   setValue,
   visibleResponsive,
 }) {
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
-  const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
+  const url = `${apiUrl}/discover/movie?api_key=${apiKey}`;
 
   const [urlSearch, setUrlSearch] = useState([]);
   const navigate = useNavigate();

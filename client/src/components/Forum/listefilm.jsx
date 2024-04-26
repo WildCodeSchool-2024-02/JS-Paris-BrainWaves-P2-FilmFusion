@@ -2,16 +2,16 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./ListeFilm.css";
 
+const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
+
 function ListeFilm() {
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
   const [movies, setMovies] = useState([]);
   const getMovies = () => {
     axios
-      .get(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`)
+      .get(`${apiUrl}/discover/movie?api_key=${apiKey}`)
       .then((response) => {
         setMovies(response.data.results);
-
-        console.info(response.data.results);
       });
   };
 

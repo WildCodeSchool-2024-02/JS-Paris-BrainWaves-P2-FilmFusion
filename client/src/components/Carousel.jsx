@@ -2,18 +2,20 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "./Carousel.css";
 
+const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
+
 function Carousel() {
   const [slide, setSlide] = useState(0);
   const [upcoming, setUpcoming] = useState();
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
 
   useEffect(() => {
     axios
-      .get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}`)
+      .get(`${apiUrl}/movie/now_playing?api_key=${apiKey}`)
       .then((response) => {
         setUpcoming(response.data.results.slice(0, 10));
       });
-  }, [apiKey]);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,8 +32,7 @@ function Carousel() {
   }
 
   return (
-
-<div className="carousel">
+    <div className="carousel">
       {upcoming.map((movie, idx) => (
         <img
           src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
@@ -41,7 +42,6 @@ function Carousel() {
         />
       ))}
     </div>
-
   );
 }
 
