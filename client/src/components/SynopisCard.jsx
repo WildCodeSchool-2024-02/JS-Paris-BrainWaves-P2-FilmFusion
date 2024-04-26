@@ -25,7 +25,7 @@ function SynopisCard({ movie }) {
     setOpenModalTrailer(true);
     document.body.classList.add("active");
   };
-
+  
   return (
     <div>
       <div className="film-presentation">

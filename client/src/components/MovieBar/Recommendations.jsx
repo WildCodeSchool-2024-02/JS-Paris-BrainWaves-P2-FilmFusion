@@ -1,4 +1,5 @@
 /* eslint-disable import/no-unresolved */
+import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,21 +12,22 @@ import { useNavigate } from "react-router-dom";
 const apiKey = import.meta.env.VITE_APP_API_KEY;
 const apiUrl = import.meta.env.VITE_APP_API_URL;
 
-function TopRated() {
+function Recommendations({ movie }) {
   const [movies, setMovies] = useState([]);
   const navigate = useNavigate();
 
-  const getMovies = () => {
-    axios
-      .get(`${apiUrl}/movie/top_rated?api_key=${apiKey}`)
-      .then((response) => {
-        setMovies(response.data.results);
-      });
-  };
-
   useEffect(() => {
+    const getMovies = () => {
+      axios
+        .get(
+          `${apiUrl}/movie/${movie.data.id}/recommendations?api_key=${apiKey}&with_genres=12`
+        )
+        .then((response) => {
+          setMovies(response.data.results);
+        });
+    };
     getMovies();
-  }, []);
+  }, [movie]);
 
   const handleMovieClick = (movieId) => {
     navigate(`/film/${movieId}`);
@@ -33,7 +35,7 @@ function TopRated() {
 
   return (
     <div className="list-swiper">
-      <h1 className="titleMovieBar">Top Rated</h1>
+      <h1 className="titleMovieBar">Recommendations</h1>
 
       <Swiper
         navigation
@@ -47,15 +49,14 @@ function TopRated() {
           280: { slidesPerView: 2, spaceBetween: 20 },
         }}
       >
-        {movies.map((movie) => (
-          <SwiperSlide key={movie.id}>
+        {movies.map((movieData) => (
+          <SwiperSlide key={movieData.id}>
             <img
-              onClick={() => handleMovieClick(movie.id)}
-              onKeyDown={() => handleMovieClick(movie.id)}
+              onClick={() => handleMovieClick(movieData.id)}
               role="presentation"
               className="imagemovie"
-              src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
-              alt="poster_movie"
+              src={`https://image.tmdb.org/t/p/w400${movieData.poster_path}`}
+              alt={movieData.title || "Movie Poster"}
             />
           </SwiperSlide>
         ))}
@@ -64,4 +65,12 @@ function TopRated() {
   );
 }
 
-export default TopRated;
+Recommendations.propTypes = {
+  movie: PropTypes.shape({
+    data: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
+
+export default Recommendations;

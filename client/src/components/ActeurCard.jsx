@@ -5,19 +5,17 @@ import "./ActeurCard.css";
 
 function ActeurCard({ movie }) {
   const [cast, setCast] = useState();
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
+
+  const apiKey = import.meta.env.VITE_APP_API_KEY;
+  const apiUrl = import.meta.env.VITE_APP_API_URL;
 
   useEffect(() => {
     axios
-      .get(
-        `https://api.themoviedb.org/3/movie/${movie}/credits?api_key=${apiKey}`
-      )
+      .get(`${apiUrl}/movie/${movie}/credits?api_key=${apiKey}`)
       .then((response) => {
         setCast(response.data);
       });
-  }, []);
-
-  console.info(cast);
+  }, [apiKey, apiUrl, movie]);
 
   return (
     <div>
