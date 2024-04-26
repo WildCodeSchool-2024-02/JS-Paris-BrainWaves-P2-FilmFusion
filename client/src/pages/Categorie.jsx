@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import SideBarGenres from "../components/CategorieComponents/SideBarGenres";
 import "./Categorie.css";
 
+const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
+
 function Categorie() {
   const { categoryid } = useParams();
   const [urlCategorie, setUrlCategorie] = useState([]);
@@ -13,9 +16,7 @@ function Categorie() {
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
 
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
-
-  const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc&with_genres=${categoryid ? categoryid.toString() : firstIdListGenre}&api_key=${apiKey}`;
+  const url = `${apiUrl}/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc&with_genres=${categoryid ? categoryid.toString() : firstIdListGenre}&api_key=${apiKey}`;
 
   const category = genres?.find(
     (genre) =>
@@ -27,25 +28,19 @@ function Categorie() {
     window.scrollTo(0, 0);
 
     axios
-      .get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`)
+      .get(`${apiUrl}/genre/movie/list?api_key=${apiKey}`)
       .then((response) => {
         setUrlFirstIdListGenre(response.data.genres[0].id);
         setCheckData(true);
         setGenres(response.data.genres);
-      })
-      .catch((error) => {
-        console.error(error);
       });
   }, []);
 
   useEffect(() => {
     if (checkData) {
-      axios
-        .get(url)
-        .then((response) => {
-          setUrlCategorie(response.data.results);
-        })
-        .catch((err) => console.error(err));
+      axios.get(url).then((response) => {
+        setUrlCategorie(response.data.results);
+      });
     }
   }, [url, checkData, page]);
 

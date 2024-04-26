@@ -3,6 +3,8 @@ import ListeFilm from "../components/Forum/listefilm";
 import "./ForumAcceuil.css";
 
 function ForumAccueil() {
+
+  
   return (
     <div className="forum">
       <h1 className="titleforum">

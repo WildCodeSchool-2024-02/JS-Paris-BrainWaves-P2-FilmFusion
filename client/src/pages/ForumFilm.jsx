@@ -3,19 +3,22 @@ import { useState, useEffect } from "react";
 import "./ForumFilm.css";
 import { useNavigate } from "react-router-dom";
 
+const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
+
 function ForumFilm() {
   const [Detail, setDetail] = useState(null);
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
+
   const navigate = useNavigate();
   const handleMovieClick = () => {
     navigate(`/forumFilm`);
   };
 
+  
+
   useEffect(() => {
     axios
-      .get(
-        `https://api.themoviedb.org/3/movie/124905?Language=en-US&api_key=${apiKey}`
-      )
+      .get(`${apiUrl}/movie/124905?Language=en-US&api_key=${apiKey}`)
       .then((response) => {
         setDetail(response.data);
       });

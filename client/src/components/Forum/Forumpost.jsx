@@ -3,19 +3,19 @@ import { useEffect, useState } from "react";
 import "./Forumpost.css";
 import { useNavigate } from "react-router-dom";
 
+const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
+
 function Forumpost() {
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
   const [movies, setMovies] = useState([]);
   const getMovies = () => {
     axios
       .get(
         `
-        https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
+        ${apiUrl}/movie/popular?api_key=${apiKey}`
       )
       .then((response) => {
         setMovies(response.data.results);
-
-        console.info(response.data.results);
       });
   };
 

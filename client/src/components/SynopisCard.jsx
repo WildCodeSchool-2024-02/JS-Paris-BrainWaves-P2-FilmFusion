@@ -2,6 +2,8 @@ import "./SynopisCard.css";
 import PropTypes from "prop-types";
 
 function SynopisCard({ movie }) {
+
+  
   
   return (
     <div>

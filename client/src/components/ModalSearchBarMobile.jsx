@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./ModalSearchBarMobile.css";
 
-function ModalSearchBarMobile({ closeModal }) {
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
-  const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
+const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
 
+function ModalSearchBarMobile({ closeModal }) {
+  const url = `${apiUrl}/discover/movie?api_key=${apiKey}`;
   const [urlSearch, setUrlSearch] = useState([]);
   const [value, setValue] = useState("");
-
   const navigate = useNavigate();
 
   useEffect(() => {
