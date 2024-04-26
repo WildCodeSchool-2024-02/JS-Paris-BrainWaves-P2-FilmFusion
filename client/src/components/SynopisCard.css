@@ -81,6 +81,33 @@
   margin-left: 10px;
 }
 
+.button-trailer {
+  background-color: var(--main-body-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: 600;
+  margin: 5px;
+  width: 160px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 1px 4px 0px black;
+}
+
+.button-trailer:hover {
+  background-color: var(--third-color);
+  color: var(--main-body-color);
+}
+
+.modal-trailer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 375px) and (max-width: 700px) {
   .film-presentation {
     display: flex;

@@ -44,7 +44,11 @@ function ModalSearchBarMobile({ closeModal }) {
     <div>
       <div className="modal-background">
         <div className="modal-container">
-          <button type="button" onClick={handleModal}>
+          <button
+            type="button"
+            className="button-mobile-search-bar"
+            onClick={handleModal}
+          >
             {" "}
             X{" "}
           </button>
