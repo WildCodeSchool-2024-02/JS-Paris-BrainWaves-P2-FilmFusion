@@ -1,8 +1,31 @@
+import axios from "axios";
 import "./SynopisCard.css";
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
+import { MdVideoLibrary } from "react-icons/md";
+import ModalTrailer from "./ModalTrailer";
 
 function SynopisCard({ movie }) {
-  
+  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
+
+  const url = `https://api.themoviedb.org/3/movie/${movie.data.id}/credits?api_key=${apiKey}`;
+
+  const [openModalTrailer, setOpenModalTrailer] = useState(false);
+  const [urlDirector, setUrlDirector] = useState([]);
+
+  useEffect(() => {
+    axios.get(url).then((response) => {
+      setUrlDirector(
+        response.data.crew.find((value) => value.job === "Director")
+      );
+    });
+  }, []);
+
+  const handleModalTrailer = () => {
+    setOpenModalTrailer(true);
+    document.body.classList.add("active");
+  };
+
   return (
     <div>
       <div className="film-presentation">
@@ -27,7 +50,22 @@ function SynopisCard({ movie }) {
                 ))}
               </div>
             </div>
-            <p className="realisateur">Réalisateur</p>
+            <p className="realisateur">{urlDirector.name}</p>
+            <button
+              type="button"
+              className="button-trailer"
+              onClick={handleModalTrailer}
+            >
+              Watch Trailer <MdVideoLibrary />
+            </button>
+            <div className="modal-trailer">
+              {openModalTrailer && (
+                <ModalTrailer
+                  closeModalTrailer={setOpenModalTrailer}
+                  movie={movie.data.id}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -55,6 +93,7 @@ SynopisCard.propTypes = {
       ).isRequired,
       overview: PropTypes.string.isRequired,
       poster_path: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
     }).isRequired,
   }).isRequired,
 };
