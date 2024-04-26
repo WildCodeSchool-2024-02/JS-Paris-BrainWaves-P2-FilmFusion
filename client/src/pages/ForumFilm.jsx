@@ -1,28 +1,32 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./ForumFilm.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const apiKey = import.meta.env.VITE_APP_API_KEY;
 const apiUrl = import.meta.env.VITE_APP_API_URL;
 
 function ForumFilm() {
+  const location = useLocation();
+  const movieId = location.state.mId;
   const [Detail, setDetail] = useState(null);
 
   const navigate = useNavigate();
   const handleMovieClick = () => {
-    navigate(`/forumFilm`);
+    navigate(`/film/${movieId}`);
   };
 
   
 
   useEffect(() => {
     axios
+
       .get(`${apiUrl}/movie/124905?Language=en-US&api_key=${apiKey}`)
+
       .then((response) => {
         setDetail(response.data);
       });
-  }, []);
+  });
 
   if (!Detail) {
     return <div>Loading...</div>;
@@ -44,7 +48,7 @@ function ForumFilm() {
 
       <div className="info">
         <h2
-          onClick={() => handleMovieClick()}
+          onClick={() => handleMovieClick(movieId)}
           onKeyDown={handleMovieClick}
           role="presentation"
           className="infoFilm"
@@ -66,7 +70,6 @@ function ForumFilm() {
           <div className="name">Profil Name</div>
 
           <div className="text">
-            {" "}
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur deserunt officiis eum facilis voluptatum praesenti
             architecto fuga illo facere libero dolores! Dicta id laboriosam vero
