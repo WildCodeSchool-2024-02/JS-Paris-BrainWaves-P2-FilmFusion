@@ -23,8 +23,12 @@ function Forumpost() {
     getMovies();
   }, []);
   const navigate = useNavigate();
-  const handleMovieClick = () => {
-    navigate(`/forumFilm`);
+  const handleMovieClick = (movieId) => {
+    navigate(`/forumFilm`, {
+      state: {
+        mId: movieId,
+      },
+    });
   };
 
   return (
@@ -51,7 +55,7 @@ function Forumpost() {
               <button
                 type="button"
                 className="postbutton"
-                onClick={() => handleMovieClick()}
+                onClick={() => handleMovieClick(movie.id)}
                 onKeyDown={() => handleMovieClick()}
               >
                 {" "}

@@ -15,7 +15,7 @@
   background-color: var(--secondary-main-color);
   display: flex;
   justify-content: center;
-  width: 300px;
+  width: auto;
   border-radius: 10px;
   box-shadow: 0px 4px 4px 0px black;
 }
@@ -31,7 +31,7 @@
   width: 95%;
   border-radius: 10px;
   object-fit: cover;
-  object-position: 100% 75%;
+  object-position: 100% 60%;
 }
 
 .info {
