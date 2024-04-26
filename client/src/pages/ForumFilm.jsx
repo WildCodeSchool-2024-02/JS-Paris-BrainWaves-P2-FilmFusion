@@ -10,18 +10,15 @@ function ForumFilm() {
   const location = useLocation();
   const movieId = location.state.mId;
   const [Detail, setDetail] = useState(null);
-
   const navigate = useNavigate();
   const handleMovieClick = () => {
     navigate(`/film/${movieId}`);
   };
 
-  
-
   useEffect(() => {
     axios
 
-      .get(`${apiUrl}/movie/124905?Language=en-US&api_key=${apiKey}`)
+      .get(`${apiUrl}/movie/${movieId}?Language=en-US&api_key=${apiKey}`)
 
       .then((response) => {
         setDetail(response.data);
