@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import "./ModalTrailer.css";
 
+const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
+
 function ModalTrailer({ closeModalTrailer, movie }) {
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
-  const url = `https://api.themoviedb.org/3/movie/${movie}/videos?api_key=${apiKey}`;
+  const url = `${apiUrl}/movie/${movie}/videos?api_key=${apiKey}`;
 
   const [urlTrailer, setUrlTrailer] = useState([]);
 

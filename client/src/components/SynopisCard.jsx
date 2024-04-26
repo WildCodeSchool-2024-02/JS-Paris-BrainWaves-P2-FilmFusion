@@ -5,10 +5,11 @@ import { useEffect, useState } from "react";
 import { MdVideoLibrary } from "react-icons/md";
 import ModalTrailer from "./ModalTrailer";
 
-function SynopisCard({ movie }) {
-  const apiKey = "d18d8616efca4b1c0cfc2fbae4c67c7c";
+const apiKey = import.meta.env.VITE_APP_API_KEY;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
 
-  const url = `https://api.themoviedb.org/3/movie/${movie.data.id}/credits?api_key=${apiKey}`;
+function SynopisCard({ movie }) {
+  const url = `${apiUrl}/movie/${movie.data.id}/credits?api_key=${apiKey}`;
 
   const [openModalTrailer, setOpenModalTrailer] = useState(false);
   const [urlDirector, setUrlDirector] = useState([]);
@@ -19,13 +20,13 @@ function SynopisCard({ movie }) {
         response.data.crew.find((value) => value.job === "Director")
       );
     });
-  }, []);
+  }, [url]);
 
   const handleModalTrailer = () => {
     setOpenModalTrailer(true);
     document.body.classList.add("active");
   };
-  
+
   return (
     <div>
       <div className="film-presentation">
