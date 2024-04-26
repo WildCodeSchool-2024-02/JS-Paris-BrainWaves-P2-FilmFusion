@@ -57,6 +57,7 @@ function ModalSearchBarMobile({ closeModal }) {
               type="text"
               name="search-mobile"
               id="search-mobile"
+              placeholder="Search ..."
               className="input-mobile"
               value={value}
               onChange={handleChange}
