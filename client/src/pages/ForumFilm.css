@@ -14,6 +14,7 @@
 .title {
   background-color: var(--secondary-main-color);
   display: flex;
+  padding: 2%;
   justify-content: center;
   width: auto;
   border-radius: 10px;
@@ -41,6 +42,7 @@
 }
 
 .infoFilm {
+  cursor: pointer;
   background-color: var(--secondary-main-color);
   display: flex;
   justify-content: center;
@@ -78,43 +80,48 @@
 .content {
   height: auto;
   width: auto;
+  padding: 20px;
 }
 
 .name {
-  margin: 20px;
   background-color: var(--third-color);
-  width: 10%;
+  color: #ffea7e;
+  width: 15%;
   height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .text {
   height: auto;
   width: auto;
-  margin: 20px;
+  margin-top: 20px;
+  color: #ffea7e;
 }
 
 .dateReponse {
   display: flex;
   justify-content: space-between;
   height: 75px;
-  margin-right: 20px;
+  margin-top: 20px;
 }
 
 .date {
-  margin: 20px;
+  margin-top: 20px;
   background-color: var(--third-color);
-  width: 15%;
+  width: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  color: #ffea7e;
 }
 
 .reponse {
+  cursor: pointer;
   margin: 20px;
   background-color: var(--third-color);
   width: 10%;
@@ -122,6 +129,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  color: #ffea7e;
 }
 
 .addComment {
@@ -137,16 +145,55 @@
   border-radius: 10px;
 }
 
+.addCommentFix {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #23180d;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 90%;
+  height: 175px;
+  border-radius: 10px;
+}
+
 .content {
+  margin: auto;
+  width: 70%;
+  height: 50%;
+  background-color: var(--secondary-main-color);
+  border-radius: 10px;
+  margin-top: 20px;
+  border: none;
+  color: var(--text-color);
+}
+
+.contentRep {
   width: 100%;
-  height: 80%;
+  height: 50%;
   background-color: var(--secondary-main-color);
   border-radius: 10px;
   margin: 20px;
+  border: none;
+  padding: 20px;
+  color: var(--text-color);
+}
+
+.contentFix {
+  width: 100%;
+  height: 50%;
+  background-color: var(--secondary-main-color);
+  border-radius: 10px;
+  margin: 20px;
+  border: none;
+  padding: 20px;
+  color: var(--text-color);
 }
 
 .papoter {
   margin: 10px;
+  color: #ffea7e;
 }
 
 .buttonComment {
@@ -158,10 +205,91 @@
   justify-content: center;
   align-items: center;
   margin: 20px;
+  color: #ffea7e;
 }
 
 .buttonDiv {
   height: 100%;
   display: flex;
   align-items: flex-end;
+}
+
+.addComment .content .papoter {
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: var(--secondary-main-color);
+  color: var(--text-color);
+  font-size: 1em;
+}
+.addCommentFix .contentFix .papoter {
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: var(--secondary-main-color);
+  color: var(--text-color);
+  font-size: 1em;
+}
+
+.contentBis {
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+  height: 80%;
+  background-color: var(--secondary-main-color);
+  border-radius: 10px;
+}
+
+@media (min-width: 375px) and (max-width: 700px) {
+  .title {
+    width: max-content;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .infoFilm {
+    font-size: larger;
+    margin: auto;
+  }
+
+  .contentRep {
+    height: 40%;
+  }
+
+  .name {
+    width: 40%;
+  }
+  .reponse {
+    width: 25%;
+  }
+
+  .date {
+    width: 45%;
+  }
+
+  .addCommentFix {
+    height: 120px;
+    width: 95%;
+  }
+
+  .contentFix {
+    height: 40%;
+  }
+  .buttonComment {
+    height: 30%;
+  }
+  .addComment {
+    height: 120px;
+    width: 90%;
+  }
+
+  .content {
+    width: 90%;
+    height: 33%;
+    margin-top: 40px;
+  }
 }

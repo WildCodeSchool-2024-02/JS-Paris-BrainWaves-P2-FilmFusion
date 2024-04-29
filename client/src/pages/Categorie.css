@@ -46,6 +46,7 @@ h1 {
 .pagination {
   display: flex;
   justify-content: center;
+  margin: 40px;
 }
 .buttonPagi {
   color: #ffe27c;
