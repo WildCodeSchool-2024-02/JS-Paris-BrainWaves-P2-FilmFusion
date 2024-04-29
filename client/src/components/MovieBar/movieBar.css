@@ -1,6 +1,7 @@
 .list-swiper {
   overflow: hidden;
   margin: 15px;
+  cursor: pointer;
 }
 
 .postermovie {
@@ -17,17 +18,15 @@
   font-size: large;
   border-radius: 10px;
   font-weight: 500;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 7px;
   cursor: pointer;
 }
 
 .title-recommandations-bar {
   background-color: #23180d;
-  margin-left: 15px;
-  width: 17%;
-  padding: 3px;
-  padding-left: 15px;
+  margin-left: 10px;
+  width: max-content;
+  padding: 5px 10px;
   border-radius: 10px;
   box-shadow: 0px 1px 4px 0px black;
 }

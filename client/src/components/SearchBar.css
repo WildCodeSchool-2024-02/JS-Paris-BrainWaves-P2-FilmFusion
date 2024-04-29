@@ -11,6 +11,7 @@
   border-radius: 5px;
   box-shadow: 0px 3px 4px 0px black;
   background-color: var(--third-color);
+  padding: 7px;
 }
 
 .visible::placeholder {

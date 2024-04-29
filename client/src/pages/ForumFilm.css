@@ -86,7 +86,7 @@
 .name {
   background-color: var(--third-color);
   color: #ffea7e;
-  width: 15%;
+  width: max-content;
   height: 10%;
   display: flex;
   justify-content: center;
@@ -112,7 +112,8 @@
 .date {
   margin-top: 20px;
   background-color: var(--third-color);
-  width: 20%;
+  width: max-content;
+  padding: 0px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,7 +125,7 @@
   cursor: pointer;
   margin: 20px;
   background-color: var(--third-color);
-  width: 10%;
+  width: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,15 +261,12 @@
     height: 40%;
   }
 
-  .name {
-    width: 40%;
-  }
   .reponse {
     width: 25%;
   }
 
   .date {
-    width: 45%;
+    width: 30%;
   }
 
   .addCommentFix {
@@ -288,7 +286,7 @@
   }
 
   .content {
-    width: 90%;
+    width: 85%;
     height: 33%;
     margin-top: 40px;
   }

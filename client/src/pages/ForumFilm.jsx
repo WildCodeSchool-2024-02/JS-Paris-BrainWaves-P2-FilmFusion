@@ -87,7 +87,6 @@ function ForumFilm() {
 
       <div className="content">
         <div className="text">{firstComment}</div>
-
         <div className="dateReponse">
           <p className="date">Posté le {new Date().toLocaleDateString()}</p>
           <button type="button" className="reponse" onClick={handleReplyClick}>
