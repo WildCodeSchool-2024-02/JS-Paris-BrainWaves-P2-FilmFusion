@@ -49,19 +49,19 @@ function Forumpost() {
               repellat odio soluta ratione.
             </p>
           </div>
-            <div className="postcomposent">
-              <p className="postdate">posted on 10/ 05/ 24</p>
-              <button
-                type="button"
-                className="postbutton"
-                onClick={() => handleMovieClick(movie.id)}
-                onKeyDown={() => handleMovieClick()}
-              >
-                {" "}
-                Chat
-              </button>
-            </div>
+          <div className="postcomposent">
+            <p className="postdate">posted on 10/ 05/ 24</p>
+            <button
+              type="button"
+              className="postbutton"
+              onClick={() => handleMovieClick(movie.id)}
+              onKeyDown={() => handleMovieClick()}
+            >
+              {" "}
+              Chat
+            </button>
           </div>
+        </div>
       ))}
     </div>
   );
