@@ -55,7 +55,7 @@ function Category() {
     <div className="list-swiper">
       {genres.map((genre) => (
         <div key={genre.id}>
-          <h2
+          <h1
             key={genre.id}
             onClick={() => navigate(`/categorie/${genre.id}`)}
             onKeyDown={() => navigate(`/categorie/${genre.id}`)}
@@ -64,7 +64,7 @@ function Category() {
             alt="liens-des-classes"
           >
             {genre.name}
-          </h2>
+          </h1>
           <Swiper
             navigation
             modules={[Navigation]}
@@ -72,7 +72,6 @@ function Category() {
             breakpoints={{
               1200: { slidesPerView: 8, spaceBetween: 20 },
               770: { slidesPerView: 6, spaceBetween: 20 },
-              500: { slidesPerView: 6, spaceBetween: 20 },
               425: { slidesPerView: 4, spaceBetween: 20 },
               320: { slidesPerView: 3, spaceBetween: 20 },
               280: { slidesPerView: 2, spaceBetween: 20 },

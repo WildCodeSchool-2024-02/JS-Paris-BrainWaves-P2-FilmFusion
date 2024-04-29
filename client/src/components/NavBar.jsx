@@ -14,7 +14,7 @@ function NavBar() {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(
-      "(min-width: 375px) and (max-width: 700px)"
+      "(min-width: 360px) and (max-width: 1150px)"
     ).matches;
     setVisibleResponsive(mediaQuery);
   }, []);
@@ -42,7 +42,7 @@ function NavBar() {
               handleClick();
             }}
           >
-            Accueil
+            Home
           </button>
         </div>
         <div className="menu-categorie">
@@ -54,7 +54,7 @@ function NavBar() {
               handleClick();
             }}
           >
-            Catégories
+            Categories
           </button>
         </div>
         <div className="menu-forum">

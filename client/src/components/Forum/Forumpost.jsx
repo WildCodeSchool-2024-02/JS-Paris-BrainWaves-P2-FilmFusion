@@ -49,9 +49,8 @@ function Forumpost() {
               repellat odio soluta ratione.
             </p>
           </div>
-          <p className="infopost">
             <div className="postcomposent">
-              <p className="postdate">poster le 00/00/00</p>
+              <p className="postdate">posted on 10/ 05/ 24</p>
               <button
                 type="button"
                 className="postbutton"
@@ -59,11 +58,10 @@ function Forumpost() {
                 onKeyDown={() => handleMovieClick()}
               >
                 {" "}
-                button
+                Chat
               </button>
             </div>
-          </p>
-        </div>
+          </div>
       ))}
     </div>
   );

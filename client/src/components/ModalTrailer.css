@@ -35,8 +35,10 @@
   height: 650px;
 }
 
-@media (min-width: 375px) and (max-width: 700px) {
+@media (min-width: 360px) and (max-width: 700px) {
   .button-close-trailer {
+    display: flex;
+    justify-content: center;
     font-size: medium;
     width: 20px;
     height: 20px;
@@ -46,6 +48,23 @@
 
   .trailer-container {
     width: 100vw;
-    height: 300px;
+    height: 50vh;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1150px) {
+  .button-close-trailer {
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+    width: 20px;
+    height: 20px;
+    top: 130px;
+    right: 20px;
+  }
+
+  .trailer-container {
+    width: 100vw;
+    height: 50vh;
   }
 }
