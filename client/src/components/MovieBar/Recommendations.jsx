@@ -35,7 +35,7 @@ function Recommendations({ movie }) {
 
   return (
     <div className="list-swiper">
-      <h1 className="titleMovieBar">Recommendations</h1>
+      <h2 className="title-recommandations-bar">Recommendations</h2>
 
       <Swiper
         navigation

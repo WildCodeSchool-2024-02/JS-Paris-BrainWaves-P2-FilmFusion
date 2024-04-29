@@ -1,4 +1,4 @@
-@media (min-width: 375px) and (max-width: 700px) {
+@media (min-width: 360px) and (max-width: 1150px) {
   .modal-background {
     display: flex;
   }
@@ -31,7 +31,7 @@
   }
 
   .input-mobile {
-    border: none;
+    border: 1px solid var(--text-color);
     background-color: var(--main-body-color);
     width: 90%;
     height: 40px;

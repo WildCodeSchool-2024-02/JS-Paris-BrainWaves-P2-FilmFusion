@@ -6,8 +6,15 @@
 }
 
 .visible {
+  color: var(--text-color);
   border: none;
+  border-radius: 5px;
   box-shadow: 0px 3px 4px 0px black;
+  background-color: var(--third-color);
+}
+
+.visible::placeholder {
+  color: var(--text-color);
 }
 
 .visible::placeholder {
@@ -47,7 +54,7 @@
   transition: var(--speed) ease;
 }
 
-@media (min-width: 375px) and (max-width: 700px) {
+@media (min-width: 360px) and (max-width: 750px) {
   .visible {
     display: none;
   }

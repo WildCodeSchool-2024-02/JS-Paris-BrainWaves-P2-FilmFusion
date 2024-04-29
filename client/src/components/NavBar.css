@@ -32,6 +32,8 @@
   border-radius: 10px;
   box-shadow: 0px 0px 28px 5px black;
   padding: 5px;
+  padding-right: 20px;
+  padding-left: 5px;
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -49,6 +51,7 @@
   border: none;
   border-radius: 10px;
   box-shadow: 0px 1px 4px 0px black;
+  cursor: pointer;
 }
 
 .button-navbar:hover {
@@ -62,58 +65,6 @@
   color: #ffea7e;
 }
 
-ul {
-  display: flex;
-  flex-direction: column;
-  font-family: "Archivo", sans-serif;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown-menu-categorie {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  position: absolute;
-  top: 80px;
-  height: auto;
-  background-color: var(--third-color);
-  width: 150px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 50px 20px var(--secondary-main-color);
-}
-
-.dropdown-menu-categorie.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: var(--speed) ease;
-}
-
-.dropdown-menu-categorie.inactive {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: var(--speed) ease;
-}
-
-li {
-  padding-top: 10px;
-}
-
-a {
-  font-family: "Archivo", sans-serif;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--main-body-color);
-}
-
 .searchbar-logo {
   display: flex;
   align-items: center;
@@ -124,11 +75,7 @@ a:hover {
   height: auto;
 }
 
-.link {
-  cursor: pointer;
-}
-
-@media (min-width: 375px) and (max-width: 700px) {
+@media (min-width: 360px) and (max-width: 750px) {
   .menu-container {
     margin: 10px;
   }
@@ -140,6 +87,28 @@ a:hover {
     padding: 0px;
     margin: 0px 5px;
     width: 40px;
+  }
+
+  .open-modal-search-bar {
+    display: flex;
+    color: var(--text-color);
+    background-color: var(--secondary-main-color);
+    border: none;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1150px) {
+  .menu-container {
+    justify-content: space-evenly;
+  }
+
+  .logo-section {
+    background-image: url("../assets/images/Logo-Mobile.svg");
+    background-size: 28px;
+    height: 28px;
+    padding: 0px;
+    margin: 0px 5px;
+    width: 28px;
   }
 
   .open-modal-search-bar {
