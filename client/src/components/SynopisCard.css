@@ -63,7 +63,7 @@
 .synopsis-title {
   background-color: #23180d;
   margin-left: 30px;
-  width: 8%;
+  width: max-content;
   padding: 3px 15px;
   border-radius: 10px;
   box-shadow: 0px 1px 4px 0px black;

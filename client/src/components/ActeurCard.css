@@ -22,6 +22,10 @@
   margin-left: 10px;
 }
 
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
 .image-actor {
   min-width: 110px;
   height: 110px;

@@ -81,9 +81,9 @@ function ForumFilm() {
         <div className="name">Profil Name</div>
 
         <div className="text">
-          lorem200Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Dolores architecto expedita dignissimos enim voluptatum quidem in
-          delectus saepe, laborum nemo!
+          lorem300lorem200Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Dolores architecto expedita dignissimos enim voluptatum quidem
+          in delectus saepe, laborum nemo!
         </div>
 
         <div className="dateReponse">
