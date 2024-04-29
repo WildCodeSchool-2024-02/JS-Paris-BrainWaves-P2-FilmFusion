@@ -86,16 +86,16 @@ function ForumFilm() {
           role="presentation"
           className="infoFilm"
         >
-          Information du film
+         Movie information
         </h2>
       </div>
 
       <div className="content">
         <div className="text">{firstComment}</div>
         <div className="dateReponse">
-          <p className="date">Posté le {new Date().toLocaleDateString()}</p>
+          <p className="date">Posted on {new Date().toLocaleDateString()}</p>
           <button type="button" className="reponse" onClick={handleReplyClick}>
-            Répondre
+            Answer
           </button>
         </div>
       </div>
@@ -107,13 +107,13 @@ function ForumFilm() {
           <div className="text">{comment}</div>
 
           <div className="dateReponse">
-            <p className="date">Posté le {new Date().toLocaleDateString()} </p>
+            <p className="date">Posted on {new Date().toLocaleDateString()} </p>
             <button
               type="button"
               className="reponse"
               onClick={handleReplyClick}
             >
-              Répondre
+              Answer
             </button>
           </div>
         </div>
@@ -123,7 +123,7 @@ function ForumFilm() {
         <div className="addComment">
           <textarea
             className="contentRep"
-            placeholder="Répondre ici..."
+            placeholder="Answer here..."
             value={newComment}
             onChange={(e) => setNewComment(e.target.value)}
           />
@@ -133,7 +133,7 @@ function ForumFilm() {
               className="buttonComment"
               onClick={handleSubmitComment}
             >
-              Commenter
+              Comment
             </button>
           </div>
         </div>
@@ -142,7 +142,7 @@ function ForumFilm() {
       <div className="addCommentFix">
         <textarea
           className="contentFix"
-          placeholder="Papoter ici..."
+          placeholder="Chat here..."
           value={fixComment}
           onChange={(e) => setFixComment(e.target.value)}
         />
@@ -152,7 +152,7 @@ function ForumFilm() {
             className="buttonComment"
             onClick={handleFixedSubmitComment}
           >
-            Commenter
+            Comment
           </button>
         </div>
       </div>
