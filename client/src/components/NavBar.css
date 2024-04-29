@@ -51,6 +51,7 @@
   border: none;
   border-radius: 10px;
   box-shadow: 0px 1px 4px 0px black;
+  cursor: pointer;
 }
 
 .button-navbar:hover {
@@ -64,58 +65,6 @@
   color: #ffea7e;
 }
 
-ul {
-  display: flex;
-  flex-direction: column;
-  font-family: "Archivo", sans-serif;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown-menu-categorie {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  position: absolute;
-  top: 80px;
-  height: auto;
-  background-color: var(--third-color);
-  width: 150px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 50px 20px var(--secondary-main-color);
-}
-
-.dropdown-menu-categorie.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: var(--speed) ease;
-}
-
-.dropdown-menu-categorie.inactive {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: var(--speed) ease;
-}
-
-li {
-  padding-top: 10px;
-}
-
-a {
-  font-family: "Archivo", sans-serif;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--main-body-color);
-}
-
 .searchbar-logo {
   display: flex;
   align-items: center;
@@ -124,10 +73,6 @@ a:hover {
 .logo-avatar {
   width: 45px;
   height: auto;
-}
-
-.link {
-  cursor: pointer;
 }
 
 @media (min-width: 360px) and (max-width: 750px) {

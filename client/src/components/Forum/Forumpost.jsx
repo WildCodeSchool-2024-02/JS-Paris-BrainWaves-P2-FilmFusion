@@ -61,7 +61,6 @@ function Forumpost() {
               )}
             </p>
           </div>
-
           <div className="postcomposent">
             <p className="postdate">posted on 10/ 05/ 24</p>
             <button

@@ -53,6 +53,7 @@ p.compost {
   width: 20%;
   border: none;
   box-shadow: 0px 2px 6px 0px black;
+  cursor: pointer;
 }
 
 .postbutton:hover {
@@ -78,6 +79,12 @@ p.compost {
 
   .titlepost {
     font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
   }
 
   .imageforumpost {
@@ -126,9 +133,14 @@ p.compost {
   }
 
   .titlepost {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 37px;
     font-size: 30px;
     margin: 0;
     margin-top: 10px;
+    text-align: center;
   }
 
   .imageforumpost {

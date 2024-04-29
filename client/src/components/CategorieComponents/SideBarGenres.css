@@ -26,6 +26,7 @@
   background-color: #372d23;
   color: #ffe27c;
   box-shadow: 0px 4px 4px 0px black;
+  cursor: pointer;
 }
 
 .bouton-genre:hover {
