@@ -1,3 +1,32 @@
+## Project-2-Presentation
+
+<p>
+      The objective was to build a website using the following technologies :
+      HTML, CSS, React JS, and fetching data from an API.
+</p>
+
+<p>
+      We had four weeks to do it. Two dedicated to the project conception using
+      agile methods, and two weeks devoted to the development.
+</p>
+
+<p>
+      We did a website about movies and decided to stand out by setting up a
+      forum section where users and guests can discuss and chat together to find
+      ideas or just about their passion.
+</p>
+
+<p>
+      I invite you to check
+      <a
+        href="https://www.figma.com/file/pedGhXiIjuzxbMVyDcnu2Z/Untitled?type=design&node-id=1-4&mode=design&t=aDrgbSlYwaU6Fv2m-0"
+        target="_blank"
+        >our Figma here.</a
+      >
+</p>
+
+<ul></ul>
+
 # JS-Paris-BrainWaves-P2-FilmFusion
 
 This project uses Harmonia. Harmonia is a framework meant to serve as a foundation for every project following the React-Express-MySQL stack, as learned in Wild Code School.
