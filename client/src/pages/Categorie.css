@@ -50,6 +50,7 @@ h1 {
   margin: 40px 0;
 }
 .button-pagination {
+  cursor: pointer;
   color: #ffe27c;
   background-color: #23180d;
   border: none;
