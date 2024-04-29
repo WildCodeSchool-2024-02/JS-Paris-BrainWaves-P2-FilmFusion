@@ -20,10 +20,9 @@
 }
 
 .postdate {
-  margin-top: 20px;
   background-color: var(--third-color);
   width: max-content;
-  padding: 10px;
+  padding: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,7 +76,7 @@
   .postforum {
     width: 90vw;
     height: 30vh;
-    margin: 10px 0;
+    margin: 20px 0;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -135,6 +134,7 @@
     margin: 10px 0;
     display: flex;
     flex-wrap: nowrap;
+    padding: 2%;
   }
   .postpost {
     display: flex;
@@ -147,8 +147,8 @@
   .titlepost {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
     height: 37px;
+    overflow: hidden;
     font-size: 30px;
     margin: 0;
     margin-top: 10px;

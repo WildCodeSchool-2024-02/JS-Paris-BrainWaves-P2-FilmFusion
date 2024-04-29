@@ -28,7 +28,7 @@
 }
 
 .bannerMovieForum {
-  height: 30vw;
+  height: 45vw;
   width: 95%;
   border-radius: 10px;
   object-fit: cover;
@@ -180,6 +180,9 @@
   padding: 20px;
   color: var(--text-color);
 }
+.contentRep::-webkit-scrollbar {
+  display: none;
+}
 
 .contentFix {
   width: 100%;
@@ -190,6 +193,10 @@
   border: none;
   padding: 20px;
   color: var(--text-color);
+}
+
+.contentFix::-webkit-scrollbar {
+  display: none;
 }
 
 .papoter {
@@ -244,6 +251,11 @@
   background-color: var(--secondary-main-color);
   border-radius: 10px;
 }
+@media (min-width: 750px) and (max-width: 1150px) {
+  .bannerMovieForum {
+    height: 50vw;
+  }
+}
 
 @media (min-width: 375px) and (max-width: 700px) {
   .title {
@@ -252,6 +264,10 @@
     display: flex;
     align-items: center;
   }
+  .bannerMovieForum {
+    height: 50vw;
+  }
+
   .infoFilm {
     font-size: larger;
     margin: auto;

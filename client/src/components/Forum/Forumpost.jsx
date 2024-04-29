@@ -62,7 +62,7 @@ function Forumpost() {
             </div>
           </div>
           <div className="postcomposent">
-            <p className="postdate">Posté le {new Date().toLocaleDateString()} </p>
+            <p className="postdate">Posted on {new Date().toLocaleDateString()} </p>
             <button
               type="button"
               className="postbutton"
