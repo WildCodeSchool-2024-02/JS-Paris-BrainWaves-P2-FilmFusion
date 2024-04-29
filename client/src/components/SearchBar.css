@@ -1,9 +1,20 @@
+:root {
+  --main-body-color: #372d23;
+  --text-color: #ffea7e;
+  --secondary-main-color: #2c1e11;
+  --third-color: #23180d;
+}
+
 .visible {
   color: var(--text-color);
   border: none;
   border-radius: 5px;
   box-shadow: 0px 3px 4px 0px black;
   background-color: var(--third-color);
+}
+
+.visible::placeholder {
+  color: var(--text-color);
 }
 
 .visible::placeholder {

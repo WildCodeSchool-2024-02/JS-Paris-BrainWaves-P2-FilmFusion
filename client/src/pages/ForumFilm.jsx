@@ -11,8 +11,31 @@ function ForumFilm() {
   const movieId = location.state.mId;
   const [Detail, setDetail] = useState(null);
   const navigate = useNavigate();
+  const [isReplying, setIsReplying] = useState(false);
+  const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState("");
+  const [fixComment, setFixComment] = useState("");
+
   const handleMovieClick = () => {
     navigate(`/film/${movieId}`);
+  };
+
+  const handleReplyClick = () => {
+    setIsReplying(!isReplying);
+  };
+
+  const handleFixedSubmitComment = () => {
+    if (fixComment.trim()) {
+      setComments([...comments, fixComment]);
+      setFixComment("");
+    }
+  };
+
+  const handleSubmitComment = () => {
+    if (newComment.trim()) {
+      setComments([...comments, newComment]);
+      setNewComment("");
+    }
   };
 
   useEffect(() => {
@@ -54,45 +77,77 @@ function ForumFilm() {
         </h2>
       </div>
 
-      <div className="comment">
-        <div className="profil">
-          <img
-            className="profilPic"
-            src="https://www.carnivalstore.de/wp-content/uploads/2021/09/1_f21db071-78e0-4143-ab8f-b0adfcebba8f.jpg"
-            alt="img"
-          />
+      <div className="content">
+        <div className="name">Profil Name</div>
+
+        <div className="text">
+          lorem200Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Dolores architecto expedita dignissimos enim voluptatum quidem in
+          delectus saepe, laborum nemo!
         </div>
 
-        <div className="content">
-          <div className="name">Profil Name</div>
-
-          <div className="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur deserunt officiis eum facilis voluptatum praesenti
-            architecto fuga illo facere libero dolores! Dicta id laboriosam vero
-            voluptatum, repudiandae numquam reprehenderit, nisi error doloribus,
-            quibusdam exercitationem unde ratione odio ab eveniet consequuntur
-            voluptatem atque enim adipisci distinctio fugit aut? A inventore,
-            culpa maiores vel ab, eligendi pariatur qui earum magni sint
-            consequatur asperiores repudiandae beatae, amet autem? Fugit vel
-            labore earum architecto corporis blanditiis quisquam cupiditate
-            possimus mollitia laboriosam sint a atque voluptatem rem.
-          </div>
-
-          <div className="dateReponse">
-            <p className="date">Posté le 10/10/2024</p>
-            <p className="reponse">Répondre</p>
-          </div>
+        <div className="dateReponse">
+          <p className="date">Posté le {new Date().toLocaleDateString()}</p>
+          <button type="button" className="reponse" onClick={handleReplyClick}>
+            Répondre
+          </button>
         </div>
       </div>
 
-      <div className="addComment">
-        <div className="content">
-          <div className="papoter">Papoter ici...</div>
-        </div>
+      {comments.map((comment) => (
+        <div className="content" key={comment}>
+          <div className="name">Nom d'utilisateur</div>
 
+          <div className="text">{comment}</div>
+
+          <div className="dateReponse">
+            <p className="date">Posté le {new Date().toLocaleDateString()} </p>
+            <button
+              type="button"
+              className="reponse"
+              onClick={handleReplyClick}
+            >
+              Répondre
+            </button>
+          </div>
+        </div>
+      ))}
+
+      {isReplying && (
+        <div className="addComment">
+          <textarea
+            className="contentRep"
+            placeholder="Répondre ici..."
+            value={newComment}
+            onChange={(e) => setNewComment(e.target.value)}
+          />
+          <div className="buttonDiv">
+            <button
+              type="button"
+              className="buttonComment"
+              onClick={handleSubmitComment}
+            >
+              Commenter
+            </button>
+          </div>
+        </div>
+      )}
+
+      <div className="addCommentFix">
+        <textarea
+          className="contentFix"
+          placeholder="Papoter ici..."
+          value={fixComment}
+          onChange={(e) => setFixComment(e.target.value)}
+        />
         <div className="buttonDiv">
-          <div className="buttonComment">Commenter</div>
+          <button
+            type="button"
+            className="buttonComment"
+            onClick={handleFixedSubmitComment}
+          >
+            Commenter
+          </button>
         </div>
       </div>
     </div>
