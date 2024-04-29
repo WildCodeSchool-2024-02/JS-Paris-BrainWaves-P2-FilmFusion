@@ -1,0 +1,16 @@
+.Carousel {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 360px) and (max-width: 750px) {
+  .carousel {
+    width: 330px;
+  }
+
+  .Carousel {
+    margin-bottom: 0;
+  }
+}

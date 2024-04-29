@@ -1,0 +1,197 @@
+.film-presentation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
+.image-film {
+  height: 400px;
+  width: 270px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 0px black;
+}
+
+.info-film {
+  display: flex;
+  flex-direction: column;
+  background-color: #23180d;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px 0px black;
+  margin-right: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.title-movie {
+  display: flex;
+  justify-content: center;
+}
+
+.details-film {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.release-runtime {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.genres-movie {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.release-runtime p {
+  margin: 10px;
+  margin-right: 20px;
+}
+
+.synopsis-title {
+  background-color: #23180d;
+  margin-left: 30px;
+  width: max-content;
+  padding: 3px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px 0px black;
+}
+
+.synopis {
+  width: auto;
+  margin-top: 60px;
+}
+
+.synopsis-resume {
+  margin-left: 20px;
+}
+
+.realisateur {
+  margin-left: 10px;
+}
+
+.button-trailer {
+  background-color: var(--main-body-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: 600;
+  margin: 5px;
+  width: 160px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 1px 4px 0px black;
+  cursor: pointer;
+}
+
+.button-trailer:hover {
+  background-color: var(--third-color);
+  color: var(--main-body-color);
+}
+
+.modal-trailer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 360px) and (max-width: 750px) {
+  .film-presentation {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .image-film {
+    height: 350px;
+    width: 270px;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+  }
+
+  .info-film {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .details-film {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .data-film {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .genres-movie {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  p {
+    font-size: small;
+  }
+
+  .data-film li {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: medium;
+    margin-left: 30px;
+  }
+
+  .synopsis-title {
+    width: 20%;
+  }
+
+  .synopsis-resume {
+    font-size: 12px;
+    margin: 0 20px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1150px) {
+  .info-film {
+    width: 41%;
+    text-align: center;
+  }
+
+  .synopsis-title {
+    width: 15%;
+  }
+}

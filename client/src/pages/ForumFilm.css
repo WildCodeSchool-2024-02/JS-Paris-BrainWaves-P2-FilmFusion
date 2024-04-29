@@ -1,0 +1,293 @@
+:root {
+  --main-body-color: #372d23;
+  --text-color: #ffea7e;
+  --secondary-main-color: #2c1e11;
+  --third-color: #23180d;
+}
+
+.titleFilm {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.title {
+  background-color: var(--secondary-main-color);
+  display: flex;
+  padding: 2%;
+  justify-content: center;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px black;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.bannerMovieForum {
+  height: 30vw;
+  width: 95%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: 100% 60%;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.infoFilm {
+  cursor: pointer;
+  background-color: var(--secondary-main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px black;
+}
+
+.comment {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
+  background-color: var(--secondary-main-color);
+  width: 90%;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.profil {
+  display: flex;
+  align-items: flex-start;
+  height: auto;
+}
+
+.profilPic {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 10px;
+  margin: 20px;
+  object-fit: cover;
+}
+
+.content {
+  height: auto;
+  width: auto;
+  padding: 20px;
+}
+
+.name {
+  background-color: var(--third-color);
+  color: #ffea7e;
+  width: max-content;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.text {
+  height: auto;
+  width: auto;
+  margin-top: 20px;
+  color: #ffea7e;
+}
+
+.dateReponse {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  margin-top: 20px;
+}
+
+.date {
+  margin-top: 20px;
+  background-color: var(--third-color);
+  width: max-content;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #ffea7e;
+}
+
+.reponse {
+  cursor: pointer;
+  margin: 20px;
+  background-color: var(--third-color);
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: #ffea7e;
+}
+
+.addComment {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #23180d;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 75%;
+  height: 175px;
+  border-radius: 10px;
+}
+
+.addCommentFix {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #23180d;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 90%;
+  height: 175px;
+  border-radius: 10px;
+}
+
+.content {
+  margin: auto;
+  width: 70%;
+  height: 50%;
+  background-color: var(--secondary-main-color);
+  border-radius: 10px;
+  margin-top: 20px;
+  border: none;
+  color: var(--text-color);
+}
+
+.contentRep {
+  width: 100%;
+  height: 50%;
+  background-color: var(--secondary-main-color);
+  border-radius: 10px;
+  margin: 20px;
+  border: none;
+  padding: 20px;
+  color: var(--text-color);
+}
+
+.contentFix {
+  width: 100%;
+  height: 50%;
+  background-color: var(--secondary-main-color);
+  border-radius: 10px;
+  margin: 20px;
+  border: none;
+  padding: 20px;
+  color: var(--text-color);
+}
+
+.papoter {
+  margin: 10px;
+  color: #ffea7e;
+}
+
+.buttonComment {
+  background-color: var(--secondary-main-color);
+  border-radius: 10px;
+  width: 125px;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  color: #ffea7e;
+}
+
+.buttonDiv {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.addComment .content .papoter {
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: var(--secondary-main-color);
+  color: var(--text-color);
+  font-size: 1em;
+}
+.addCommentFix .contentFix .papoter {
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: var(--secondary-main-color);
+  color: var(--text-color);
+  font-size: 1em;
+}
+
+.contentBis {
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+  height: 80%;
+  background-color: var(--secondary-main-color);
+  border-radius: 10px;
+}
+
+@media (min-width: 375px) and (max-width: 700px) {
+  .title {
+    width: max-content;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .infoFilm {
+    font-size: larger;
+    margin: auto;
+  }
+
+  .contentRep {
+    height: 40%;
+  }
+
+  .reponse {
+    width: 25%;
+  }
+
+  .date {
+    width: 30%;
+  }
+
+  .addCommentFix {
+    height: 120px;
+    width: 95%;
+  }
+
+  .contentFix {
+    height: 40%;
+  }
+  .buttonComment {
+    height: 30%;
+  }
+  .addComment {
+    height: 120px;
+    width: 90%;
+  }
+
+  .content {
+    width: 85%;
+    height: 33%;
+    margin-top: 40px;
+  }
+}

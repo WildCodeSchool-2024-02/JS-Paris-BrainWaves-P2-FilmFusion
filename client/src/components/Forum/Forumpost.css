@@ -1,0 +1,171 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+}
+.postforum {
+  background-color: #2c1e11;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 80%;
+}
+.titlepost {
+  font-size: 30px;
+}
+
+.imageforumpost {
+  display: flex;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.postpost {
+  display: flex;
+  height: 50%;
+}
+
+.post-comment {
+  height: 16vh;
+  margin: 0 20px;
+  overflow: hidden;
+}
+
+.postcomposent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  width: 90%;
+}
+.postbutton {
+  background-color: #23180d;
+  color: #ffe27c;
+  border-radius: 10px;
+  margin: 0;
+  height: 30px;
+  width: 20%;
+  border: none;
+  box-shadow: 0px 2px 6px 0px black;
+  cursor: pointer;
+}
+
+.postbutton:hover {
+  color: var(--main-body-color);
+}
+
+@media (min-width: 360px) and (max-width: 750px) {
+  .postforum {
+    width: 90vw;
+    height: 30vh;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .postpost {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-top: 10px;
+    height: 50%;
+  }
+
+  .titlepost {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .imageforumpost {
+    height: 90%;
+    margin-left: 14px;
+  }
+
+  .post-comment {
+    height: 13vh;
+    margin: 0 20px;
+    overflow: hidden;
+  }
+
+  .postcomposent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 90%;
+  }
+
+  .postbutton {
+    margin: 0;
+    height: 30px;
+    width: 20%;
+    border: none;
+    box-shadow: 0px 2px 6px 0px black;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1150px) {
+  .postforum {
+    width: 90vw;
+    height: 30vh;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .postpost {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-top: 10px;
+    height: 60%;
+  }
+
+  .titlepost {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 37px;
+    font-size: 30px;
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .imageforumpost {
+    height: 90%;
+    margin-left: 20px;
+  }
+
+  .post-comment {
+    height: 13vh;
+    margin: 0 20px;
+    overflow: hidden;
+  }
+
+  .postcomposent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 90%;
+  }
+
+  .postbutton {
+    margin: 0;
+    height: 30px;
+    width: 20%;
+    border: none;
+    box-shadow: 0px 2px 6px 0px black;
+  }
+}
