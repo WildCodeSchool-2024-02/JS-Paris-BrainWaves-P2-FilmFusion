@@ -15,6 +15,7 @@ function ForumFilm() {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
   const [fixComment, setFixComment] = useState("");
+  const [firstComment, setFirstComment] = useState("");
 
   const handleMovieClick = () => {
     navigate(`/film/${movieId}`);
@@ -40,13 +41,20 @@ function ForumFilm() {
 
   useEffect(() => {
     axios
-
       .get(`${apiUrl}/movie/${movieId}?Language=en-US&api_key=${apiKey}`)
-
       .then((response) => {
         setDetail(response.data);
       });
-  });
+
+    axios
+      .get(`${apiUrl}/movie/${movieId}/reviews?api_key=${apiKey}`)
+      .then((response) => {
+        const reviews = response.data.results;
+        if (reviews.length > 0) {
+          setFirstComment(reviews[0].content);
+        }
+      });
+  }, [movieId]);
 
   if (!Detail) {
     return <div>Loading...</div>;
@@ -78,14 +86,7 @@ function ForumFilm() {
       </div>
 
       <div className="content">
-        <div className="name">Profil Name</div>
-
-        <div className="text">
-          lorem300lorem200Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Dolores architecto expedita dignissimos enim voluptatum quidem
-          in delectus saepe, laborum nemo!
-        </div>
-
+        <div className="text">{firstComment}</div>
         <div className="dateReponse">
           <p className="date">Posté le {new Date().toLocaleDateString()}</p>
           <button type="button" className="reponse" onClick={handleReplyClick}>
@@ -96,7 +97,7 @@ function ForumFilm() {
 
       {comments.map((comment) => (
         <div className="content" key={comment}>
-          <div className="name">Nom d'utilisateur</div>
+          <div className="name">Anonymous</div>
 
           <div className="text">{comment}</div>
 

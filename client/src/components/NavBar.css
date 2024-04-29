@@ -76,7 +76,7 @@
   height: auto;
 }
 
-@media (min-width: 360px) and (max-width: 750px) {
+@media (min-width: 320px) and (max-width: 750px) {
   .menu-container {
     margin: 10px;
   }
