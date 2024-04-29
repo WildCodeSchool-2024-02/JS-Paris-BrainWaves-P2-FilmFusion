@@ -53,13 +53,13 @@ function Forumpost() {
               src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
               alt="poster_movie"
             />
-            <p className="compost">
+            <div className="compost">
               {comments[movie.id] && (
                 <div>
-                  <p>{comments[movie.id].content}</p>
+                  <p className="post-comment">{comments[movie.id].content}</p>
                 </div>
               )}
-            </p>
+            </div>
           </div>
           <div className="postcomposent">
             <p className="postdate">posted on 10/ 05/ 24</p>

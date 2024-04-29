@@ -19,6 +19,11 @@
 
 .forumalignement {
   display: flex;
+  flex-direction: row;
+}
+
+.list-movie {
+  width: 30%;
 }
 
 @media (min-width: 360px) and (max-width: 750px) {
