@@ -3,16 +3,14 @@ import ListeFilm from "../components/Forum/listefilm";
 import "./ForumAcceuil.css";
 
 function ForumAccueil() {
-
-  
   return (
     <div className="forum">
       <h1 className="titleforum">
-        Bienvenues sur le forum <br /> Venez papoter et trouver des conseils
-        pour choisir <br /> un film !
+        Welcome to the forum !<br /> Come chat and find advice <br /> to choose
+        a film!
       </h1>
       <div className="forumalignement">
-        <ListeFilm />
+        <ListeFilm className="list-movie" />
         <Forumpost />
       </div>
     </div>

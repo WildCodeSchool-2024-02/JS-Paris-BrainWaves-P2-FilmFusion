@@ -51,7 +51,7 @@ function SynopisCard({ movie }) {
                 ))}
               </div>
             </div>
-            <p className="realisateur">{urlDirector.name}</p>
+            <p className="realisateur">Director : {urlDirector.name}</p>
             <button
               type="button"
               className="button-trailer"

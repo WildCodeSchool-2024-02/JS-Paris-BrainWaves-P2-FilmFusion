@@ -21,7 +21,7 @@ function ListeFilm() {
 
   return (
     <div className="listcolor">
-      <h1 className="listmovies">Liste des fillms</h1>
+      <h1 className="listmovies">Movie lists</h1>
       {movies.map((movie) => (
         <div key={movie.title}>
           <p className="listfilms">{movie.title}</p>{" "}

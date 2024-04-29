@@ -87,7 +87,7 @@ function Categorie() {
       </div>
       <div className="pagination">
         <button
-          className="buttonPagi"
+          className="button-pagination"
           type="submit"
           onClick={handlePrevPage}
           disabled={page === 1}
@@ -95,7 +95,11 @@ function Categorie() {
           Précédent
         </button>
         <span>Page {page}</span>
-        <button className="buttonPagi" type="submit" onClick={handleNextPage}>
+        <button
+          className="button-pagination"
+          type="submit"
+          onClick={handleNextPage}
+        >
           Suivant
         </button>
       </div>
