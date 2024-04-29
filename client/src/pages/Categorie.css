@@ -61,7 +61,7 @@ h1 {
   color: var(--main-body-color);
 }
 
-@media (min-width: 360px) and (max-width: 700px) {
+@media (min-width: 360px) and (max-width: 750px) {
   .display-page {
     display: flex;
     flex-direction: column-reverse;

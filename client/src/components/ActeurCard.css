@@ -31,7 +31,7 @@
   object-position: 100% 35%;
 }
 
-@media (min-width: 360px) and (max-width: 700px) {
+@media (min-width: 360px) and (max-width: 750px) {
   .actor-section {
     margin-top: 60px;
   }

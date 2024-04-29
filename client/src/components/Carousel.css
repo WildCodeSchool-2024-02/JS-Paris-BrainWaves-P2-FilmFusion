@@ -52,7 +52,7 @@
   background-color: grey;
 }
 
-@media (min-width: 360px) and (max-width: 700px) {
+@media (min-width: 360px) and (max-width: 750px) {
   .carousel {
     height: 60%;
     width: 80%;
