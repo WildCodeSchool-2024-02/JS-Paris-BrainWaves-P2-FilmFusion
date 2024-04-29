@@ -5,7 +5,7 @@
   margin-bottom: 50px;
 }
 
-@media (min-width: 375px) and (max-width: 700px) {
+@media (min-width: 360px) and (max-width: 750px) {
   .carousel {
     width: 330px;
   }
