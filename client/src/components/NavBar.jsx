@@ -14,7 +14,7 @@ function NavBar() {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(
-      "(min-width: 360px) and (max-width: 1150px)"
+      "(min-width: 320px) and (max-width: 1150px)"
     ).matches;
     setVisibleResponsive(mediaQuery);
   }, []);

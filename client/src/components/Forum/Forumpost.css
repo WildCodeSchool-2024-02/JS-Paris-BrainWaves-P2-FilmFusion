@@ -1,18 +1,18 @@
 .post {
   display: flex;
   flex-direction: column;
+  width: 90%;
   align-items: center;
 }
 .postforum {
   background-color: #2c1e11;
   border-radius: 10px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: 20px;
-  margin-left: 80px;
-  margin-right: 80px;
+  width: 80%;
 }
 .titlepost {
   font-size: 30px;
@@ -28,13 +28,13 @@
 
 .postpost {
   display: flex;
+  height: 50%;
 }
 
-p.compost {
-  height: auto;
-  margin: 15px;
+.post-comment {
+  height: 16vh;
+  margin: 0 20px;
   overflow: hidden;
-  padding: 15px;
 }
 
 .postcomposent {
@@ -92,11 +92,10 @@ p.compost {
     margin-left: 14px;
   }
 
-  p.compost {
-    height: auto;
-    margin: 0 10px;
+  .post-comment {
+    height: 13vh;
+    margin: 0 20px;
     overflow: hidden;
-    padding: 5px;
   }
 
   .postcomposent {
@@ -148,11 +147,10 @@ p.compost {
     margin-left: 20px;
   }
 
-  p.compost {
-    height: auto;
-    margin: 15px;
+  .post-comment {
+    height: 13vh;
+    margin: 0 20px;
     overflow: hidden;
-    padding: 15px;
   }
 
   .postcomposent {
