@@ -46,7 +46,7 @@
   visibility: visible;
   transform: translateY(0);
   transition: var(--speed) ease;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   align-items: flex-start;
 }
