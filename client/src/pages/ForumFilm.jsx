@@ -13,7 +13,7 @@ function ForumFilm() {
   }, []);
 
   const location = useLocation();
-  const movieId = location.state.mId;
+  const movieId = location.state?.mId;
   const [Detail, setDetail] = useState(null);
   const navigate = useNavigate();
   const [isReplying, setIsReplying] = useState(false);
