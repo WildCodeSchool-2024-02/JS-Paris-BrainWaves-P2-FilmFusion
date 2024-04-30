@@ -46,6 +46,9 @@
   visibility: visible;
   transform: translateY(0);
   transition: var(--speed) ease;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .dropdown-search-bar.inactive {
