@@ -1,5 +1,7 @@
 ## Project-2-Presentation
 
+<h1>Film Fusion</h1>
+
 <p>
       The objective was to build a website using the following technologies :
       HTML, CSS, React JS, and fetching data from an API.
@@ -27,19 +29,19 @@
 
 <p>If you need to used the repository you have to do some command to install the project ! </p>
 
-<p>First, you have to create a accompt on the API website. Here the link :  <a
+<p> ✨ First, you have to create a accompt on the API website. Here the link :  <a
         href="https://www.themoviedb.org/?language=fr"
         target="_blank"
         >https://www.themoviedb.org/?language=fr</a
       ></p>
 
-<p>Then get the API key !</p>
+<p> 🔑 Then get the API key !</p>
 
-<p>Clone the repository</p>
+<p> 📁 Clone the repository</p>
 
-<p>Don't forget to do "npm install"</p>
+<p> 📌 Don't forget to do "npm install"</p>
 
-<p>And do "npm run dev" to start the project.</p>
+<p> 📍 And do "npm run dev" to start the project.</p>
 
 <p> Last command to configure everything, create a file .env based on the .env.sample</p>
 
